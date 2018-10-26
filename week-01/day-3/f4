@@ -1,0 +1,14 @@
+total 7
+-rw-r--r-- 1 RBKoronczi 197609  0 okt.   26 14:54 f4
+-rw-r--r-- 1 RBKoronczi 197609 47 okt.   26 14:54 f3
+-rw-r--r-- 1 RBKoronczi 197609 32 okt.   26 14:47 f2
+-rw-r--r-- 1 RBKoronczi 197609 32 okt.   26 14:47 f1
+-rw-r--r-- 1 RBKoronczi 197609  0 okt.   26 14:45 f5
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:45 ./
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:45 t1/
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:45 t2/
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:45 t3/
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:45 t4/
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:45 t5/
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:44 first-task/
+drwxr-xr-x 1 RBKoronczi 197609  0 okt.   26 14:40 ../
