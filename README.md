@@ -1,6 +1,6 @@
 [Tiptop-Syllabus](https://github.com/green-fox-academy/tiptop-syllabus)
 
-My Website: <RBKoronczi.github.io>
+My Website: <https://RBKoronczi.github.io>
 
 It's Repo: <https://github.com/RBKoronczi/RBKoronczi.github.io>
 
