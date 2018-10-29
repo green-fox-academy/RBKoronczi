@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c048c8f1-7db6-4726-9dc9-a63405aca460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/ConditionalVariableMutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/IWontCheatOnTheExams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,23 +24,23 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="27" />
+          <entry key="java" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="27" />
+          <entry key="JAVA" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3299" />
+          <entry key="java" value="3312" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3299" />
+          <entry key="JAVA" value="3312" />
         </counts>
       </usages-collector>
     </session>
@@ -48,10 +48,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ConditionalVariableMutation.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/IWontCheatOnTheExams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -93,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/com/company/PrintBigger.java" />
         <option value="$PROJECT_DIR$/src/com/company/PartyIndicator.java" />
         <option value="$PROJECT_DIR$/src/com/company/ConditionalVariableMutation.java" />
+        <option value="$PROJECT_DIR$/src/com/company/IWontCheatOnTheExams.java" />
       </list>
     </option>
   </component>
@@ -145,7 +146,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540823284951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540823525858" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ConditionalVariableMutation">
+  <component name="RunManager" selected="Application.IWontCheatOnTheExams">
     <configuration name="ConditionalVariableMutation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.ConditionalVariableMutation" />
       <module name="day-1" />
@@ -173,8 +174,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OddEven" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.OddEven" />
+    <configuration name="IWontCheatOnTheExams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.IWontCheatOnTheExams" />
       <module name="day-1" />
       <extension name="coverage">
         <pattern>
@@ -226,19 +227,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.OddEven" />
       <item itemvalue="Application.OneTwoALot" />
       <item itemvalue="Application.PrintBigger" />
       <item itemvalue="Application.PartyIndicator" />
       <item itemvalue="Application.ConditionalVariableMutation" />
+      <item itemvalue="Application.IWontCheatOnTheExams" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IWontCheatOnTheExams" />
         <item itemvalue="Application.ConditionalVariableMutation" />
         <item itemvalue="Application.PartyIndicator" />
         <item itemvalue="Application.PrintBigger" />
         <item itemvalue="Application.OneTwoALot" />
-        <item itemvalue="Application.OddEven" />
       </list>
     </recent_temporary>
   </component>
@@ -253,12 +254,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540810812423</updated>
       <workItem from="1540810814795" duration="3836000" />
-      <workItem from="1540818049672" duration="5053000" />
+      <workItem from="1540818049672" duration="5294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8889000" />
+    <option name="totallyTimeSpent" value="9130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -294,7 +295,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -303,7 +304,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -484,8 +485,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ConditionalVariableMutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+        <state relative-caret-position="-336">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/IWontCheatOnTheExams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
