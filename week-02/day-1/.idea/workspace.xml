@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c048c8f1-7db6-4726-9dc9-a63405aca460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/TwoNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/CodingHours.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,23 +23,23 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="5" />
+          <entry key="java" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="219" />
+          <entry key="java" value="368" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="219" />
+          <entry key="JAVA" value="368" />
         </counts>
       </usages-collector>
     </session>
@@ -47,10 +47,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TwoNumbers.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CodingHours.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <caret line="13" column="79" lean-forward="true" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -75,6 +75,7 @@
         <option value="$PROJECT_DIR$/src/com/company/HelloOthers.java" />
         <option value="$PROJECT_DIR$/src/com/company/IntroduceYourself.java" />
         <option value="$PROJECT_DIR$/src/com/company/TwoNumbers.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CodingHours.java" />
       </list>
     </option>
   </component>
@@ -127,7 +128,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540812333952" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540812434282" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -141,9 +142,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TwoNumbers">
-    <configuration name="HelloMe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.HelloMe" />
+  <component name="RunManager" selected="Application.CodingHours">
+    <configuration name="CodingHours" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.CodingHours" />
       <module name="day-1" />
       <extension name="coverage">
         <pattern>
@@ -208,19 +209,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HelloMe" />
       <item itemvalue="Application.HumptyDumpty" />
       <item itemvalue="Application.HelloOthers" />
       <item itemvalue="Application.IntroduceYourself" />
       <item itemvalue="Application.TwoNumbers" />
+      <item itemvalue="Application.CodingHours" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CodingHours" />
         <item itemvalue="Application.TwoNumbers" />
         <item itemvalue="Application.IntroduceYourself" />
         <item itemvalue="Application.HelloOthers" />
         <item itemvalue="Application.HumptyDumpty" />
-        <item itemvalue="Application.HelloMe" />
       </list>
     </recent_temporary>
   </component>
@@ -234,12 +235,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540810812423</updated>
-      <workItem from="1540810814795" duration="1513000" />
+      <workItem from="1540810814795" duration="1873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1513000" />
+    <option name="totallyTimeSpent" value="1873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -250,7 +251,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -259,7 +260,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,6 +325,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CodingHours.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="79" lean-forward="true" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
         </state>
       </provider>
     </entry>
