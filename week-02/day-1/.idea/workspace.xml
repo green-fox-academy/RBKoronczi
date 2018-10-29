@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c048c8f1-7db6-4726-9dc9-a63405aca460" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/DrawDiagonal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/GuessTheNumber.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,23 +23,23 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="43" />
+          <entry key="java" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="43" />
+          <entry key="JAVA" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="5566" />
+          <entry key="java" value="5868" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5566" />
+          <entry key="JAVA" value="5868" />
         </counts>
       </usages-collector>
     </session>
@@ -48,10 +47,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/DrawDiagonal.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/GuessTheNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+            <state relative-caret-position="442">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -103,6 +102,7 @@
         <option value="$PROJECT_DIR$/src/com/company/DrawDiamond.java" />
         <option value="$PROJECT_DIR$/src/com/company/DrawSquare.java" />
         <option value="$PROJECT_DIR$/src/com/company/DrawDiagonal.java" />
+        <option value="$PROJECT_DIR$/src/com/company/GuessTheNumber.java" />
       </list>
     </option>
   </component>
@@ -155,7 +155,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540830583010" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540831113667" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -169,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DrawDiagonal">
+  <component name="RunManager" selected="Application.GuessTheNumber">
     <configuration name="DrawDiagonal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.DrawDiagonal" />
       <module name="day-1" />
@@ -222,8 +222,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.DrawTriangle" />
+    <configuration name="GuessTheNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.GuessTheNumber" />
       <module name="day-1" />
       <extension name="coverage">
         <pattern>
@@ -236,19 +236,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DrawTriangle" />
       <item itemvalue="Application.DrawPyramid" />
       <item itemvalue="Application.DrawDiamond" />
       <item itemvalue="Application.DrawSquare" />
       <item itemvalue="Application.DrawDiagonal" />
+      <item itemvalue="Application.GuessTheNumber" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawDiagonal" />
         <item itemvalue="Application.DrawPyramid" />
         <item itemvalue="Application.DrawSquare" />
         <item itemvalue="Application.DrawDiamond" />
-        <item itemvalue="Application.DrawTriangle" />
       </list>
     </recent_temporary>
   </component>
@@ -263,18 +263,18 @@
       <option name="presentableId" value="Default" />
       <updated>1540810812423</updated>
       <workItem from="1540810814795" duration="3836000" />
-      <workItem from="1540818049672" duration="12317000" />
+      <workItem from="1540818049672" duration="12852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16153000" />
+    <option name="totallyTimeSpent" value="16688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -283,7 +283,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -578,8 +578,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DrawDiagonal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="70" selection-start-line="31" selection-start-column="70" selection-end-line="31" selection-end-column="70" />
+        <state relative-caret-position="255">
+          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/GuessTheNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
