@@ -129,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540813006729" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540813189306" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -143,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FavoriteNumber">
+  <component name="RunManager" selected="Application.Swap">
     <configuration name="CodingHours" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.CodingHours" />
       <module name="day-1" />
@@ -170,8 +170,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloOthers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.HelloOthers" />
+    <configuration name="IntroduceYourself" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.IntroduceYourself" />
       <module name="day-1" />
       <extension name="coverage">
         <pattern>
@@ -183,8 +183,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntroduceYourself" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.IntroduceYourself" />
+    <configuration name="Swap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Swap" />
       <module name="day-1" />
       <extension name="coverage">
         <pattern>
@@ -210,19 +210,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HelloOthers" />
       <item itemvalue="Application.IntroduceYourself" />
       <item itemvalue="Application.TwoNumbers" />
       <item itemvalue="Application.CodingHours" />
       <item itemvalue="Application.FavoriteNumber" />
+      <item itemvalue="Application.Swap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Swap" />
         <item itemvalue="Application.FavoriteNumber" />
         <item itemvalue="Application.CodingHours" />
         <item itemvalue="Application.TwoNumbers" />
         <item itemvalue="Application.IntroduceYourself" />
-        <item itemvalue="Application.HelloOthers" />
       </list>
     </recent_temporary>
   </component>
