@@ -9,7 +9,7 @@ public class Colors {
     //   `"orange red", "red", "tomato"`
     // - In `colors[2]` store the shades of pink:
     //   `"orchid", "violet", "pink", "hot pink"`
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Sorry for the ugly code!
         String[] greens = {"lime", "forest green", "olive", "pale green", "spring green"};
         String[] reds = {"orange red", "red", "tomato", "", "",};
         String[] pinks = {"orchid", "violet", "pink", "hot pink", "", ""};
