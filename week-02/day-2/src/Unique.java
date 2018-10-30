@@ -8,7 +8,7 @@ public class Unique {
         //  Example
         System.out.println(unique(new int[] {1, 11, 34, 11, 52, 61, 1, 34}));
         //  should print: `[1, 11, 34, 52, 61]`
-        
+
     }
     public static String unique(int... numbers) {
         String uniquePrint ="";
@@ -40,12 +40,11 @@ public class Unique {
             }
             if (isUnique) {
                 uniqueArray[i-shift] = numbers[i];
-            } else
-            {
+            } else        {
                 shift++;
             }
         }
-
+        //Preparing string
         uniquePrint = Arrays.toString(uniqueArray);
         return uniquePrint;
     }
