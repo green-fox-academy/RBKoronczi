@@ -12,6 +12,9 @@ public class Anagram {
         if (anagram(word1, word2)) {
             System.out.println("Wow It's an Anagram!");
         }
+        else {
+            System.out.println("It's not an Anagram");
+        }
 
 
     }
