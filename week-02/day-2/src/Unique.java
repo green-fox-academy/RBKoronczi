@@ -31,7 +31,6 @@ public class Unique {
         int shift = 0;
         for (int i = 0; i < uniqueArray.length+shift; i++) {
             boolean isUnique = true;
-
             for (int j = 0; j < numbers.length; j++) {
                 if (numbers[i] == numbers[j] && i > j) {
                     isUnique = false;

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c048c8f1-7db6-4726-9dc9-a63405aca460" name="Default Changelist" comment="" />
+    <list default="true" id="c048c8f1-7db6-4726-9dc9-a63405aca460" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/DrawChessTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../day-2/src/PalindromeSearcher.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,52 +16,39 @@
     <session id="-1589545728">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="45" />
+          <entry key="java" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="45" />
+          <entry key="JAVA" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6153" />
+          <entry key="java" value="6394" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6153" />
+          <entry key="JAVA" value="6394" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/ParametricAverage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,6 +97,7 @@
         <option value="$PROJECT_DIR$/src/com/company/DrawDiagonal.java" />
         <option value="$PROJECT_DIR$/src/com/company/GuessTheNumber.java" />
         <option value="$PROJECT_DIR$/src/com/company/ParametricAverage.java" />
+        <option value="$PROJECT_DIR$/src/com/company/DrawChessTable.java" />
       </list>
     </option>
   </component>
@@ -130,6 +121,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -138,17 +130,27 @@
               <item name="day-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="day-1" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="day-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="day-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="day-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="day-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540831799864" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540975173943" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -162,7 +164,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ParametricAverage">
+  <component name="RunManager" selected="Application.DrawChessTable">
+    <configuration name="DrawChessTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.DrawChessTable" />
+      <module name="day-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DrawDiagonal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.DrawDiagonal" />
       <module name="day-1" />
@@ -178,19 +193,6 @@
     </configuration>
     <configuration name="DrawPyramid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.DrawPyramid" />
-      <module name="day-1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DrawSquare" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.DrawSquare" />
       <module name="day-1" />
       <extension name="coverage">
         <pattern>
@@ -230,18 +232,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.DrawPyramid" />
-      <item itemvalue="Application.DrawSquare" />
       <item itemvalue="Application.DrawDiagonal" />
       <item itemvalue="Application.GuessTheNumber" />
       <item itemvalue="Application.ParametricAverage" />
+      <item itemvalue="Application.DrawChessTable" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DrawChessTable" />
         <item itemvalue="Application.ParametricAverage" />
         <item itemvalue="Application.GuessTheNumber" />
         <item itemvalue="Application.DrawDiagonal" />
         <item itemvalue="Application.DrawPyramid" />
-        <item itemvalue="Application.DrawSquare" />
       </list>
     </recent_temporary>
   </component>
@@ -258,16 +260,17 @@
       <workItem from="1540810814795" duration="3836000" />
       <workItem from="1540818049672" duration="14100000" />
       <workItem from="1540889182304" duration="131000" />
+      <workItem from="1540974539342" duration="664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18067000" />
+    <option name="totallyTimeSpent" value="18731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -580,6 +583,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
           <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DrawChessTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
