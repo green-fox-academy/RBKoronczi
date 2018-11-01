@@ -17,11 +17,7 @@ public class DiagonalMatrix {
         int matrixSize = myScanner.nextInt();
         int[][] matrix = new int[matrixSize][matrixSize];
         for (int i = 0; i < matrixSize; i++) {
-            for (int j = 0; j < matrixSize; j++) {
-                if (i==j) {
-                    matrix[i][j] = 1;
-                }
-            }
+            matrix[i][i] = 1;
             System.out.println(Arrays.toString(matrix[i]));
         }
 

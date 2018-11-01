@@ -1,3 +1,4 @@
+import javax.xml.bind.SchemaOutputResolver;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +9,7 @@ public class PalindromeSearcher {
     // and return a list with the found palindromes.
     public static void main(String[] args) {
         System.out.println(Arrays.toString(PalindromeSearcher("dog goat dad duck doodle never")));
+        System.out.println(Arrays.toString(PalindromeSearcher("racecar")));
 
     }
     public static Object[] PalindromeSearcher (String input) {
