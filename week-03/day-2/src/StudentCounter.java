@@ -60,6 +60,7 @@ public class StudentCounter{
                 }
             }
         }
+
         System.out.println("The sum of ages of people who have less than 5 candies is " + sumOfAges);
     }
 }
