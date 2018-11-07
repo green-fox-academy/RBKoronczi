@@ -12,7 +12,7 @@ public class ColoredBox {
         int lastX = xPoints[xPoints.length-1];
         int lastY = yPoints[yPoints.length-1];
         for (int i = 0; i < 4; i++){
-            graphics.setColor(new Color(xPoints[i], yPoints[i], xPoints[i]));
+            graphics.setColor(new Color(xPoints[i], yPoints[i], xPoints[i]+yPoints[i]));
             graphics.drawLine(lastX, lastY, xPoints[i], yPoints[i]);
             lastX = xPoints[i];
             lastY = yPoints[i];
