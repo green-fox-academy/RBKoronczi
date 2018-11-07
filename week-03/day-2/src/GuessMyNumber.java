@@ -51,7 +51,6 @@ public class GuessMyNumber {
                 System.out.println("Congratulations. You won!");
                 return false;
             }
-
             if (guess > gameNumber){
                 System.out.println("Too High");
             } else {
