@@ -27,7 +27,6 @@ public class ConnectTheDots {
             yPoints[i] = coordinates[i][1];
         }
         graphics.drawPolygon(xPoints,yPoints,xPoints.length);
-
     }
 
     // Don't touch the code below
