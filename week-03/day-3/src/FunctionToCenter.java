@@ -10,10 +10,11 @@ public class FunctionToCenter {
         // The x and y coordinates of the line's starting point
         // and draws a line from that point to the center of the canvas.
         // Fill the canvas with lines from the edges, every 20 px, to the center.
-        for (int i = 0; i <= HEIGHT; i += 20) {
-            for (int j = 0; i <= WIDTH; j += 20) {
-                if ((i == 0 || j == 0 || i == HEIGHT || j == WIDTH)) {
-                    GoToCenter.DrawToCenter(graphics, j, i);
+        for (int i = 0; i <= WIDTH; i += 20) {
+            for (int j = 0; j <= HEIGHT; j += 20) {
+                boolean isOnEdge = ((j == 0 || j == HEIGHT) || (i == 0 || i == WIDTH));
+                if(isOnEdge) {
+                    GoToCenter.DrawToCenter(graphics, i, j);
                 }
             }
         }
