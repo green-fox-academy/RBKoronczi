@@ -6,9 +6,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class SuperHexagon {
     public static void mainDraw(Graphics graphics) {
-        superHexagon(4, 10, 10, 253, 259, graphics);
-        graphics.setColor(Color.RED);
-        graphics.drawRect(10, 10, 253, 259);
+        superHexagon(4, 0, 0, WIDTH, HEIGHT, graphics);
     }
     public static void superHexagon(int sides, int initX, int initY, int width, int height, Graphics graphics){
         int baseNum = 2*sides-1;
