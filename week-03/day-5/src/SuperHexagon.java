@@ -8,7 +8,8 @@ public class SuperHexagon {
         superHexagon(8, 0, 0, WIDTH, HEIGHT, graphics);
     }
 
-    public static void superHexagon(int numberOfSides, int initX, int initY, int drawWidth, int drawHeight, Graphics graphics) {
+    public static void superHexagon(int numberOfSides, int initX, int initY, int drawWidth, int drawHeight,
+                                    Graphics graphics) {
         int baseNum = 2 * numberOfSides - 1;
         int hexHeight = drawHeight / (baseNum);
         int hexSide = drawWidth / (3 * numberOfSides - 1);
@@ -62,9 +63,6 @@ public class SuperHexagon {
         result[1][5] = yPos;
         return result;
     }
-
-
-
 
     // Don't touch the code below
     static int WIDTH = 320*2;
