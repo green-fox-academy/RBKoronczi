@@ -6,8 +6,28 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Demo {
     public static void mainDraw(Graphics graphics) {
-        graphics.drawRect(10, 10, 300, 300);
-        Triangles.triangles(16, 10, 10, 300, 300, graphics);
+        int paddingX= 10;
+        int paddingY= 10;
+        int stdWidth = 300;
+        int stdHeight = 300;
+        for (int i = 1; i <= 4; i++) {
+            int stdPaddingX = paddingX * i + stdWidth * (i - 1);
+            graphics.setColor(Color.BLACK);
+            graphics.drawRect(stdPaddingX, paddingY, stdWidth, stdHeight);
+            switch (i) {
+                case 1:
+                    Triangles.triangles(16, stdPaddingX, paddingY, stdWidth, stdHeight, graphics);
+                    break;
+                case 2:
+                    LinePlay.LinePlay(stdPaddingX, paddingY, stdWidth, stdHeight, graphics);
+                    break;
+                case 3:
+                    for (int j = 0; j < 4; j++){
+                        EnvelopeStar.envelopeQuarter(stdPaddingX, paddingY, stdWidth, stdHeight, j, graphics);
+                    }
+                    break;
+            }
+        }
     }
 
     // Don't touch the code below
