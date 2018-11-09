@@ -6,7 +6,8 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class SuperHexagon {
     public static void mainDraw(Graphics graphics) {
-        superHexagon(4, 0, 0, WIDTH, HEIGHT, graphics);
+        superHexagon(4, 10, 10, 253, 259, graphics);
+        graphics.drawRect(10, 10, 253, 259);
     }
     public static void superHexagon(int sides, int initX, int initY, int width, int height, Graphics graphics){
         int baseNum = 2*sides-1;
@@ -21,12 +22,12 @@ public class SuperHexagon {
                 tiles--;
             }
             for (int j = 0; j < tiles; j++){
-                int posX = initX + sideOf + ((halfSide+sideOf)*i);
-                int posY = 0;
+                int posX = initX + sideOf + ((halfSide + sideOf) * i);
+                int posY;
                 if (i < sides) {
-                    posY = initY + sides * heightOf/2 - i * heightOf / 2 + j * heightOf;
+                    posY = initY + (sides - i + j * 2) * heightOf / 2;
                 } else  {
-                    posY = initY + (i-sides+2) * heightOf / 2 + j * heightOf;
+                    posY = initY + (i - sides + 2 + 2 * j) * heightOf / 2;
                 }
                 drawHexagon(posX, posY, heightOf, sideOf, graphics);
             }
