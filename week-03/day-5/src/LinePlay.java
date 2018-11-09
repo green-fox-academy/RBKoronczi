@@ -21,7 +21,7 @@ public class LinePlay {
                 firstY = startY + drawHeight - drawHeight/drawIntensity*i;
                 secondX = firstX - drawWidth/drawIntensity*i;
                 secondY = startY;
-                graphics.setColor(Color.MAGENTA);
+                graphics.setColor(new Color(182, 95, 241));
                 graphics.drawLine(firstX, firstY, secondX, secondY);
             }
     }
