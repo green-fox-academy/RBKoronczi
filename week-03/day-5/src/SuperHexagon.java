@@ -6,8 +6,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class SuperHexagon {
     public static void mainDraw(Graphics graphics) {
-        superHexagon(4, 10, 10, 253, 259, graphics);
-        graphics.drawRect(10, 10, 253, 259);
+        superHexagon(8, 0, 0, WIDTH, HEIGHT, graphics);
     }
     public static void superHexagon(int sides, int initX, int initY, int width, int height, Graphics graphics){
         int baseNum = 2*sides-1;
@@ -60,8 +59,8 @@ public class SuperHexagon {
 
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 320*2;
+    static int HEIGHT = 320*2;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
