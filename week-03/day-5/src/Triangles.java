@@ -18,7 +18,7 @@ public class Triangles {
                 int[] xPoints = new int[3];
                 int[] yPoints = new int[3];
                 if (j == 0) {
-                    xPoints[0] = width / 2 - widthInc / 2 * i + startX;
+                    xPoints[0] = width / 2 - widthInc / 2 * (i-1) + startX;
                 } else {
                     xPoints[0] = capPoint + widthInc;
                 }
