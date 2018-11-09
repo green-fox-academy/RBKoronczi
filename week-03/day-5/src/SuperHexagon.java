@@ -21,17 +21,23 @@ public class SuperHexagon {
                 tiles--;
             }
             for (int j = 0; j < tiles; j++){
-                int posX = initX + sideOf + ((halfSide + sideOf) * i);
-                int posY;
-                if (i < sides) {
-                    posY = initY + (sides - i + j * 2) * heightOf / 2;
-                } else  {
-                    posY = initY + (i - sides + 2 + 2 * j) * heightOf / 2;
-                }
-                drawHexagon(posX, posY, heightOf, sideOf, graphics);
+                int pos[] = getTilePos(i, j, initX, initY, sides, sideOf, halfSide, heightOf);
+                drawHexagon(pos[0], pos[1], heightOf, sideOf, graphics);
             }
         }
     }
+    public static int[] getTilePos(int i, int j, int initX, int initY, int sides, int sideOf, int halfSide, int heightOf){
+        int posX = initX + sideOf + ((halfSide + sideOf) * i);
+        int posY;
+        if (i < sides) {
+            posY = initY + (sides - i + j * 2) * heightOf / 2;
+        } else  {
+            posY = initY + (i - sides + 2 + 2 * j) * heightOf / 2;
+        }
+        int[] result = {posX, posY};
+        return result;
+    }
+
     public static void drawHexagon(int xPos, int yPos, int height, int side, Graphics graphics){
         int[][] points = getHexagonPoints(xPos, yPos, height, side);
         graphics.drawPolygon(points[0], points[1], 6);
