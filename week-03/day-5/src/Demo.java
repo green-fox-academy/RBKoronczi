@@ -26,7 +26,11 @@ public class Demo {
                         EnvelopeStar.envelopeQuarter(stdPaddingX, paddingY, stdWidth, stdHeight, j, graphics);
                     }
                     break;
+                case 4: LinePlayQuarters.LinePlayQuarters(4, stdPaddingX, paddingY, stdWidth, stdHeight, graphics);
             }
+            graphics.setColor(Color.BLACK);
+            graphics.drawRect((WIDTH-308)/2, 320, 308, 308);
+            SuperHexagon.superHexagon(4, (WIDTH-308)/2, 320, 308, 308, graphics);
         }
     }
 
