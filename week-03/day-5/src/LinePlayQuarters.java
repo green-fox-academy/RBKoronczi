@@ -5,13 +5,16 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class LinePlayQuarters {
     public static void mainDraw(Graphics graphics) {
-        int numberOf = 16;
-        int sqrNum = (int)(Math.sqrt(numberOf));
-        int widthOf = WIDTH/numberOf*sqrNum;
-        int heightOf = HEIGHT/numberOf*sqrNum;
-        for (int i = 0; i < numberOf/sqrNum; i++){
-            for (int j = 0; j < numberOf/sqrNum; j++){
-                LinePlay.LinePlay(i*widthOf, j*heightOf, widthOf, heightOf, graphics);
+        LinePlayQuarters(16, 0, 0, WIDTH, HEIGHT, graphics);
+
+    }
+    public static void LinePlayQuarters(int numberOfQuarters, int initX, int initY, int width, int height, Graphics graphics) {
+        int sqrNum = (int) (Math.sqrt(numberOfQuarters));
+        int quarterWidth = width / numberOfQuarters * sqrNum;
+        int quarterHeight = height / numberOfQuarters * sqrNum;
+        for (int i = 0; i < numberOfQuarters / sqrNum; i++) {
+            for (int j = 0; j < numberOfQuarters / sqrNum; j++) {
+                LinePlay.LinePlay(i * quarterWidth + initX, j * quarterHeight + initY, quarterWidth, quarterHeight, graphics);
             }
         }
     }
