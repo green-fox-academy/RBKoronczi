@@ -18,7 +18,7 @@ public class TicTacToe {
         // Should print "Draw"
     }
     public static String ticTacResult(String fileName){
-        List<String> content = Logs.fileToStringList(fileName);
+        List<String> content = fileRead.fileToStringList(fileName);
         char[][] ticTacToe = new char[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++){
