@@ -16,7 +16,9 @@ public class fileRead {
             return content;
         }catch (IOException e) {
             List<String> error = new ArrayList<>();
-            error.add("READ ERROR!!!");
+            String errorMessage = "READ ERROR!!!";
+            System.out.println(errorMessage);
+            error.add(errorMessage);
             return error;
         } catch (Exception e){
             return null;
