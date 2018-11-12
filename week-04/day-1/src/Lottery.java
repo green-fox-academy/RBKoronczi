@@ -14,8 +14,12 @@ public class Lottery {
         List<String> source = fileRead.fileToStringList(filename);
         HashMap<Integer, Integer> lotteryNumbers = mapLotteryNumbers(source);
         ArrayList<Integer> result = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            result.add(orderKeysByValue(lotteryNumbers).get(i));
+        try {
+            for (int i = 0; i < 5; i++) {
+                result.add(orderKeysByValue(lotteryNumbers).get(i));
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid Data!");
         }
         return result;
     }
@@ -53,9 +57,11 @@ public class Lottery {
     public static int[] getLotteryNumbersInLine(String source) {
         int[] result = new int[5];
         String[] lineElements = source.split(";");
-        for (int i = lineElements.length - 1; i > lineElements.length - 6; i--) {
-            result[(i - lineElements.length + 1) * -1] = Integer.parseInt(lineElements[i]);
-        }
+        try {
+            for (int i = lineElements.length - 1; i > lineElements.length - 6; i--) {
+                result[(i - lineElements.length + 1) * -1] = Integer.parseInt(lineElements[i]);
+            }
+        } catch (Exception e) { }
         return result;
     }
 }
