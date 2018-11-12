@@ -7,7 +7,7 @@ public class CopyFile {
     // It should take the filenames as parameters
     // It should return a boolean that shows if the copy was successful
     public static void main(String[] args) {
-        
+
     }
     public static boolean CopyFile (String source, String output) {
         Path sourcePath = Paths.get(source);
