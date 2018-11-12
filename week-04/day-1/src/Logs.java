@@ -1,6 +1,9 @@
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.PublicKey;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Logs {
@@ -9,17 +12,34 @@ public class Logs {
     // Write a function that returns an array with the unique IP adresses.
     // Write a function that returns the GET / POST request ratio.
     public static void main(String[] args) {
-        uniqueIp("log.txt");
+        System.out.println(Arrays.toString(uniqueIp("log.txt")));
+        System.out.println("The GET/POST ratio is: " + getPostRatio("log.txt"));
     }
     public static String[] uniqueIp(String fileName){
         List<String> log = fileToStringList(fileName);
+        ArrayList<String> addresses = new ArrayList<>();
         for (String logLine: log) {
-
+            String ipAddress = getIpFromLog(logLine);
+            if (!addresses.contains(ipAddress)) {
+                addresses.add(ipAddress);
+            }
         }
-        return null;
+        String[] result = addresses.toArray(new String[addresses.size()]);
+        return result;
     }
     public static double getPostRatio(String filename){
-        return 0;
+        List<String> log = fileToStringList(filename);
+        int GetCount = 0;
+        int PostCount = 0;
+        for (String logLine: log) {
+            String GetPost = getGetPostFromLog(logLine);
+            if (GetPost.equals("GET")){
+                GetCount++;
+            } else if (GetPost.equals("POST")){
+                PostCount++;
+            }
+        }
+        return GetCount/PostCount;
     }
     public static List<String> fileToStringList(String fileName) {
         Path source = Paths.get(fileName);
@@ -31,7 +51,12 @@ public class Logs {
         }
     }
     public static String getIpFromLog (String logLine){
-        String[] result = logLine.split(" ");
-        return result[8];
+        return splitLog(logLine)[8];
+    }
+    public static String getGetPostFromLog (String logLine){
+        return splitLog(logLine)[11];
+    }
+    public static String[] splitLog (String logLine){
+        return logLine.split(" ");
     }
 }
