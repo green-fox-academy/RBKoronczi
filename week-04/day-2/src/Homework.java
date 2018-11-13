@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class homework {
+public class Homework {
     public static void main(String[] args) {
 
         ArrayList<HashMap> treeList = new ArrayList<>();
