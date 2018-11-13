@@ -23,6 +23,6 @@ public class Farm {
             }
         }
         animals.remove(indexOfMin);
-        }
+        
     }
 }
