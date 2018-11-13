@@ -1,10 +1,10 @@
 package animal;
 
 public class Animal {
-    int hunger;
-    int thirst;
+    public int hunger;
+    public int thirst;
 
-    Animal(){
+    public Animal(){
         this.hunger = 50;
         this.thirst = 50;
     }
