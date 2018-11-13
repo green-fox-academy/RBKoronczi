@@ -1,4 +1,4 @@
-package fleet.of.things;
+package fleetofthings;
 
 /**
  * Created by aze on 2017.03.29..

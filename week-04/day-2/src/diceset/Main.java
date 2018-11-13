@@ -1,4 +1,4 @@
-package dice.set;
+package diceset;
 
 import java.util.Arrays;
 

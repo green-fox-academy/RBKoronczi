@@ -1,4 +1,4 @@
-package fleet.of.things;
+package fleetofthings;
 
 public class FleetOfThings {
 
