@@ -9,10 +9,12 @@ public class Pirate {
         isAlive = true;
     }
 
-    void drinkSomeRum(){
+    String drinkSomeRum(){
         if (isAlive) {
             intoxication++;
+            return "The pirate drank.";
         }
+        return deathMessage;
     }
 
     String howsItGoingMate(){
@@ -31,7 +33,15 @@ public class Pirate {
         return deathMessage;
     }
 
-    void die(){
-        isAlive = false;
+    String die(){
+        if (isAlive) {
+            isAlive = false;
+        }
+        return deathMessage;
     }
+
+    String brawl(Pirate brawlMate){
+        return deathMessage;
+    }
+
 }
