@@ -1,9 +1,11 @@
 package teachersandstudents;
 
 public class student {
-    static void learn(){};
+    static void learn() {
+    }
 
-    void question(){
-        teachers.
+
+    static void question() {
+        teachers.answer();
     }
 }
