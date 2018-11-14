@@ -42,17 +42,51 @@ public class Ship {
   boolean battle(Ship otherShip) {
     boolean outcome = this.calculateScore() > otherShip.calculateScore();
     if (outcome) {
-      otherShip.battleLoss();
-      this.party();
-      System.out.println(this.name.shipName + " won!");
-      this.represent();
+      battleEffects(otherShip);
     } else {
-      this.battleLoss();
-      otherShip.party();
-      System.out.println(otherShip.name.shipName + " won!");
-      otherShip.represent();
+      otherShip.battleEffects(this);
     }
     return outcome;
+  }
+
+  boolean battle(Ship otherShip, boolean isAdvanced) {
+    if(isAdvanced) {
+      boolean outcome = this.advancedCalculateScore() > otherShip.advancedCalculateScore();
+      if (outcome) {
+        battleEffects(otherShip);
+      } else {
+        otherShip.battleEffects(this);
+      }
+      return outcome;
+    } else {
+      return battle(otherShip);
+    }
+  }
+
+  private int calculateScore() {
+    int score = this.getCrewAlive() - this.captain.intoxication;
+    return score;
+  }
+
+  private int advancedCalculateScore() {
+    int score = this.getCrewConscious();
+    if(captain.isAlive) {
+      if (captain.isConscious) {
+        score -= captain.intoxication;
+      } else {
+        score /= 2;
+      }
+    } else {
+      score = 0;
+    }
+      return score;
+  }
+
+  private void battleEffects(Ship otherShip) {
+    otherShip.battleLoss();
+    this.party();
+    System.out.println(this.name.shipName + " won!");
+    this.represent();
   }
 
   private int getCrewAlive() {
@@ -65,9 +99,14 @@ public class Ship {
     return crewAlive;
   }
 
-  private int calculateScore() {
-    int score = this.getCrewAlive() - this.captain.intoxication;
-    return score;
+  private int getCrewConscious() {
+    int crewConscious = 0;
+    for (Pirate pirate : crew) {
+      if (pirate.isConscious) {
+        crewConscious++;
+      }
+    }
+    return crewConscious;
   }
 
   private void battleLoss() {
