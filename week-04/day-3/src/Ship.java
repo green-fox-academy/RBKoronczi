@@ -4,6 +4,7 @@ import java.util.List;
 public class Ship {
   List<Pirate> crew;
   Pirate captain;
+  ShipName name;
 
    void fillShip() {
      this.crew = new ArrayList<>();
@@ -12,6 +13,7 @@ public class Ship {
      for (long i = 0; i < crewSize; i++) {
        crew.add(new Pirate());
      }
+     this.name = new ShipName();
   }
 
   void represent() {
