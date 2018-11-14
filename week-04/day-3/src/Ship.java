@@ -6,16 +6,15 @@ public class Ship {
   Pirate captain;
   List<Pirate> crew;
 
-  Ship(){}
+  Ship() {
+    this.name = new ShipName();
+  }
 
-  Ship(String shipName){
+  Ship(String shipName) {
     this.name = new ShipName(shipName);
   }
 
   void fillShip() {
-    if (this.name.shipName.length() == 0) {
-      this.name = new ShipName();
-    }
     this.captain = new Pirate();
     this.crew = new ArrayList<>();
     long crewSize = Math.round(Math.random() * 100);
