@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShipName {
-  private static final String shipNameSourceFileName = "shipnames.txt";
+  private static final String shipNameSourceFileName = "ShipNames.txt";
   private static final Path shipNameSource = Paths.get(shipNameSourceFileName);
   private static List<String> usedShipNames = new ArrayList<>();
 
@@ -26,7 +26,8 @@ public class ShipName {
       do {
         int index = (int)(Math.random() * shipNameList.size());
         randomShipName = shipNameList.get(index);
-      } while (nameIsUnique(randomShipName));
+      } while (usedShipNames.contains(randomShipName));
+      usedShipNames.add(randomShipName);
       return randomShipName;
     }
     return "";
@@ -41,9 +42,5 @@ public class ShipName {
       System.out.println(shipNameSourceFileName + " not found!");
     }
     return content;
-  }
-
-  private static boolean nameIsUnique(String name) {
-    return !usedShipNames.contains(name);
   }
 }

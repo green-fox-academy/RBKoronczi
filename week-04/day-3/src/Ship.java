@@ -20,7 +20,7 @@ public class Ship {
     System.out.printf("The Captain drank " + captain.intoxication + " kegs of rum");
     if (captain.isAlive) {
       if (captain.isConscious) {
-        System.out.printf(" and he's alive.");
+        System.out.printf(" and he's still alive.");
       } else {
         System.out.printf(" and he's unconscious.");
       }
@@ -29,7 +29,7 @@ public class Ship {
     }
     System.out.println();
     int crewAlive = this.getCrewAlive();
-    System.out.println("There's " + crewAlive + " pirates alive on this ship!");
+    System.out.println("There's " + crewAlive + " pirates alive on this ship.");
   }
 
   boolean battle(Ship otherShip) {
@@ -37,9 +37,13 @@ public class Ship {
     if (outcome) {
       otherShip.battleLoss();
       this.party();
+      System.out.println(this.name.shipName + " won!");
+      this.represent();
     } else {
       this.battleLoss();
       otherShip.party();
+      System.out.println(otherShip.name.shipName + " won!");
+      otherShip.represent();
     }
     return outcome;
   }

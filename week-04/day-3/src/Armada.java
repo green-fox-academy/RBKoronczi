@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,19 +17,23 @@ public class Armada {
   boolean war(Armada otherArmada) {
     int thisCounter = this.armada.size() - 1;
     int otherCounter = otherArmada.armada.size() - 1;
-    while (thisCounter > 0 && otherCounter > 0) {
-      System.out.println("Ship first." + thisCounter + " fights Ship second." + otherCounter);
+    System.out.println("The sizes of the armadas are: " + (thisCounter + 1) + " and " + (otherCounter + 1) + ".");
+    System.out.println();
+    do {
+      String thisShipName = this.armada.get(thisCounter).name.shipName;
+      String otherShipName = otherArmada.armada.get(otherCounter).name.shipName;
+      System.out.println(thisShipName + " fights " + otherShipName + ".");
       if (this.armada.get(thisCounter).battle(otherArmada.armada.get(otherCounter))) {
         otherCounter--;
-        System.out.println("first." + thisCounter + " Won!");
-        this.armada.get(thisCounter).represent();
       } else {
         thisCounter--;
-        System.out.println("second." + otherCounter + " Won!");
-        otherArmada.armada.get(otherCounter).represent();
       }
+      System.out.println(
+          "There's " + (thisCounter + 1) + " ships left in the first armada," +
+              " and " + (otherCounter + 1) + " left in the second"
+      );
       System.out.println();
-    }
+    } while (thisCounter >= 0 && otherCounter >= 0);
     return (thisCounter > otherCounter);
   }
 }
