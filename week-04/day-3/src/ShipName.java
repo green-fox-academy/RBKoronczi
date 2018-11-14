@@ -8,6 +8,7 @@ public class ShipName {
   private static final String shipNameSourceFileName = "ShipNames.txt";
   private static final Path shipNameSource = Paths.get(shipNameSourceFileName);
   private static List<String> usedShipNames = new ArrayList<>();
+  private static int genericShipNameCounter = 0;
 
   String shipName;
 
@@ -30,7 +31,7 @@ public class ShipName {
       usedShipNames.add(randomShipName);
       return randomShipName;
     }
-    return "";
+    return "Ship " + genericShipNameCounter++;
   }
 
   private static List<String> getSourceContent() {
@@ -39,7 +40,6 @@ public class ShipName {
       content = Files.readAllLines(shipNameSource);
     } catch (Exception e) {
       content = new ArrayList<>();
-      System.out.println(shipNameSourceFileName + " not found!");
     }
     return content;
   }
