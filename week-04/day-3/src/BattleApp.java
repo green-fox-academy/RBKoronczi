@@ -4,7 +4,7 @@ public class BattleApp {
     Ship intrepid = new Ship("Intrepid");
     dauntless.fillShip();
     intrepid.fillShip();
-    if(dauntless.battle(intrepid)){
+    if (dauntless.battle(intrepid)) {
       System.out.println("Status of the Intrepid: ");
       intrepid.represent();
     } else {
