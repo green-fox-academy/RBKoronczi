@@ -1,18 +1,15 @@
 public class BattleApp {
   public static void main(String[] args) {
-    Ship dauntless = new Ship();
-    Ship intrepid = new Ship();
+    Ship dauntless = new Ship("Dauntless");
+    Ship intrepid = new Ship("Intrepid");
     dauntless.fillShip();
     intrepid.fillShip();
     if(dauntless.battle(intrepid)){
-      System.out.println("The Dauntless Won!");
+      System.out.println("Status of the Intrepid: ");
+      intrepid.represent();
     } else {
-      System.out.println("The Intrepid Won!");
+      System.out.println("Status of the Dauntless: ");
+      dauntless.represent();
     }
-    System.out.println("Status of the Dauntless: ");
-    dauntless.represent();
-    System.out.println();
-    System.out.println("Status of the Intrepid: ");
-    intrepid.represent();
   }
 }

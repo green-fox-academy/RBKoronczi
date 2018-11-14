@@ -2,18 +2,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Ship {
-  List<Pirate> crew;
-  Pirate captain;
   ShipName name;
+  Pirate captain;
+  List<Pirate> crew;
 
-   void fillShip() {
-     this.crew = new ArrayList<>();
-     this.captain = new Pirate();
-     long crewSize = Math.round(Math.random()*100);
-     for (long i = 0; i < crewSize; i++) {
-       crew.add(new Pirate());
-     }
-     this.name = new ShipName();
+  Ship(){}
+
+  Ship(String shipName){
+    this.name = new ShipName(shipName);
+  }
+
+  void fillShip() {
+    if (this.name.shipName.length() == 0) {
+      this.name = new ShipName();
+    }
+    this.captain = new Pirate();
+    this.crew = new ArrayList<>();
+    long crewSize = Math.round(Math.random() * 100);
+    for (long i = 0; i < crewSize; i++) {
+      crew.add(new Pirate());
+    }
   }
 
   void represent() {
@@ -33,7 +41,7 @@ public class Ship {
   }
 
   boolean battle(Ship otherShip) {
-     boolean outcome = this.calculateScore() > otherShip.calculateScore();
+    boolean outcome = this.calculateScore() > otherShip.calculateScore();
     if (outcome) {
       otherShip.battleLoss();
       this.party();
@@ -50,43 +58,43 @@ public class Ship {
 
   private int getCrewAlive() {
     int crewAlive = 0;
-    for (Pirate pirate: crew) {
+    for (Pirate pirate : crew) {
       if (pirate.isAlive) {
         crewAlive++;
       }
     }
-     return crewAlive;
+    return crewAlive;
   }
 
   private int calculateScore() {
-     int score = this.getCrewAlive() - this.captain.intoxication;
-     return score;
+    int score = this.getCrewAlive() - this.captain.intoxication;
+    return score;
   }
 
   private void battleLoss() {
-     if (getRandomBoolean()) {
-       this.captain.die();
-     }
-     for (Pirate pirate : this.crew) {
-       if (getRandomBoolean()) {
-         pirate.die();
-       }
-     }
+    if (getRandomBoolean()) {
+      this.captain.die();
+    }
+    for (Pirate pirate : this.crew) {
+      if (getRandomBoolean()) {
+        pirate.die();
+      }
+    }
   }
 
   boolean getRandomBoolean() {
-     return Math.random() < 0.5;
+    return Math.random() < 0.5;
   }
 
   private void party() {
-     drinkRandomRum(this.captain);
-     for (Pirate pirate : this.crew) {
-       drinkRandomRum(pirate);
-     }
+    drinkRandomRum(this.captain);
+    for (Pirate pirate : this.crew) {
+      drinkRandomRum(pirate);
+    }
   }
 
   private void drinkRandomRum(Pirate pirate) {
-    for(int i = 0; i < Math.round(Math.random()*10); i++) {
+    for (int i = 0; i < Math.round(Math.random() * 10); i++) {
       pirate.drinkSomeRum();
     }
   }

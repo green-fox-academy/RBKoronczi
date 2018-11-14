@@ -19,7 +19,7 @@ public class ShipName {
     this.shipName = getRandomShipName();
   }
 
-  public static String getRandomShipName() {
+  private static String getRandomShipName() {
     List<String> shipNameList = getSourceContent();
     String randomShipName;
     if (shipNameList.size() != 0) {

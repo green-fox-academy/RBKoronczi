@@ -30,7 +30,7 @@ public class Pirate {
       if (isConscious) {
         String result = "";
         if (intoxication < 5) {
-            result += "Pour me anudder!";
+          result += "Pour me anudder!";
         } else {
           result += "Arghh, I'ma Pirate. How d'ya d'ink its goin?";
           intoxication = 0;

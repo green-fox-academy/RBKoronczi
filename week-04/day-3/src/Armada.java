@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,8 +28,8 @@ public class Armada {
         thisCounter--;
       }
       System.out.println(
-          "There's " + (thisCounter + 1) + " ships left in the first armada," +
-              " and " + (otherCounter + 1) + " left in the second"
+          "There's " + (thisCounter + 1) + " ships left in the first armada,"
+              + " and " + (otherCounter + 1) + " left in the second"
       );
       System.out.println();
     } while (thisCounter >= 0 && otherCounter >= 0);
