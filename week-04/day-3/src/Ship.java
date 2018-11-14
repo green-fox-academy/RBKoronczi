@@ -16,13 +16,16 @@ public class Ship {
 
   void represent() {
     System.out.printf("The Captain drank " + captain.intoxication + " kegs of rum");
-     if (captain.isAlive) {
+    if (captain.isAlive) {
       if (captain.isConscious) {
-        System.out.printf("and he's alive.");
+        System.out.printf(" and he's alive.");
+      } else {
+        System.out.printf(" and he's unconscious.");
       }
-       System.out.printf("and he's unconscious.");
+    } else {
+      System.out.printf(" and he's dead.");
     }
-    System.out.printf("and he's dead.");
+    System.out.println();
     int crewAlive = this.getCrewAlive();
     System.out.println("There's " + crewAlive + " pirates alive on this ship!");
   }
@@ -55,12 +58,18 @@ public class Ship {
   }
 
   private void battleLoss() {
-     for (Pirate pirate : this.crew){
-       boolean dies = (Math.random() < 0.5);
-       if (dies){
+     if (getRandomBoolean()) {
+       this.captain.die();
+     }
+     for (Pirate pirate : this.crew) {
+       if (getRandomBoolean()) {
          pirate.die();
        }
      }
+  }
+
+  boolean getRandomBoolean() {
+     return Math.random() < 0.5;
   }
 
   private void party() {
