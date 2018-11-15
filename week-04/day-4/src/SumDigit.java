@@ -7,11 +7,9 @@ public class SumDigit {
   }
 
   public static int SumDigit(int n) {
-    System.out.println("parameter " + n);
     if (n / 10 == 0) {
       return n;
     } else {
-      System.out.println("current part of sum " + n % 10);
       return (n % 10 + SumDigit(n / 10));
     }
   }
