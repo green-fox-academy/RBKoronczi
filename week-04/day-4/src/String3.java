@@ -16,7 +16,6 @@ public class String3 {
       } else {
         indexOfLastStar = -1;
       }
-
       string = string.substring(0, indexOfLastStar+2) + "*" + string.substring(indexOfLastStar+2);
       System.out.println(string);
       return putStarsInString(string);
