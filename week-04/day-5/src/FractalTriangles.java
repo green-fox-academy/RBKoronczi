@@ -5,8 +5,13 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class FractalTriangles {
   public static void mainDraw(Graphics graphics){
-    drawFractalTriangle(7, 0, 0, WIDTH, HEIGHT, graphics);
+    int xPos = 0;
+    int yPos = 0;
+    int width = WIDTH * 9 / 10;
+    int height = HEIGHT * 9 / 10;
+    drawFractalTriangle(7, xPos, yPos, util.aroundItself(width), util.aroundItself(height), graphics);
   }
+
 
   public static void drawFractalTriangle(int level, int xPos, int yPos, int width, int height, Graphics graphics) {
     graphics.setColor(util.getRandomColor());
@@ -21,9 +26,9 @@ public class FractalTriangles {
   public static void drawTriangle(int xPos, int yPos, int width, int height, Graphics graphics){
     int[] xPoints = {xPos, xPos + width, xPos + width/2};
     int[] yPoints = {yPos, yPos, yPos + height};
-    graphics.setColor(util.getRandomColor());
     graphics.drawPolygon(xPoints, yPoints, 3);
   }
+
 
   // Don't touch the code below
   static int WIDTH = 512;
@@ -39,6 +44,7 @@ public class FractalTriangles {
     jFrame.setVisible(true);
     jFrame.pack();
     panel.setBackground(Color.WHITE);
+
   }
 
   static class ImagePanel extends JPanel {
