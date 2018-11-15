@@ -44,7 +44,6 @@ public class FractalTriangles {
     jFrame.setVisible(true);
     jFrame.pack();
     panel.setBackground(Color.WHITE);
-
   }
 
   static class ImagePanel extends JPanel {
