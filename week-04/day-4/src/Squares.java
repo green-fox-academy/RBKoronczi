@@ -6,7 +6,7 @@ import static javax.swing.JFrame.isDefaultLookAndFeelDecorated;
 
 public class Squares {
   public static void mainDraw(Graphics graphics) {
-    drawSquares(5, 0, 0, HEIGHT, WIDTH, graphics);
+    drawSquares(7, 5, 5, 729, 729, graphics);
   }
 
   public static void drawSquares(int level, int xPos, int yPos, int width, int height, Graphics graphics){
@@ -25,8 +25,8 @@ public class Squares {
 
 
   // Don't touch the code below
-  static int WIDTH = 640;
-  static int HEIGHT = 640;
+  static int WIDTH = 740;
+  static int HEIGHT = 740;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
