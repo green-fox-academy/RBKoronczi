@@ -5,22 +5,22 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class FractalHexagon {
   public static void mainDraw(Graphics graphics) {
-    hexagonfFractal(5, 0, 0, WIDTH, HEIGHT, graphics);
+    hexagonFractal(5, 0, 0, WIDTH, HEIGHT, graphics);
   }
 
-  public static void hexagonfFractal(int level, int xPos, int yPos, int width, int height, Graphics graphics){
+  public static void hexagonFractal(int level, int xPos, int yPos, int width, int height, Graphics graphics){
     graphics.setColor(util.getRandomColor());
     drawHexagon(xPos, yPos, width, height, graphics);
     if (level == 0){
     } else {
       int sWidth = width / 3;
       int sHeight = height / 3;
-      hexagonfFractal(level - 1, xPos + width / 6, yPos, sWidth, sHeight, graphics);
-      hexagonfFractal(level - 1, xPos + width / 2, yPos, sWidth, sHeight, graphics);
-      hexagonfFractal(level - 1, xPos + width - width / 3, yPos + height / 3, sWidth, sHeight, graphics);
-      hexagonfFractal(level - 1, xPos + width / 2, yPos + height - height / 3, sWidth, sHeight, graphics);
-      hexagonfFractal(level - 1, xPos + width / 6, yPos + height - height / 3, sWidth, sHeight, graphics);
-      hexagonfFractal(level - 1, xPos, yPos + height / 3, sWidth, sHeight, graphics);
+      hexagonFractal(level - 1, xPos + width / 6, yPos, sWidth, sHeight, graphics);
+      hexagonFractal(level - 1, xPos + width / 2, yPos, sWidth, sHeight, graphics);
+      hexagonFractal(level - 1, xPos + width - width / 3, yPos + height / 3, sWidth, sHeight, graphics);
+      hexagonFractal(level - 1, xPos + width / 2, yPos + height - height / 3, sWidth, sHeight, graphics);
+      hexagonFractal(level - 1, xPos + width / 6, yPos + height - height / 3, sWidth, sHeight, graphics);
+      hexagonFractal(level - 1, xPos, yPos + height / 3, sWidth, sHeight, graphics);
     }
   }
 
