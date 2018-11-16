@@ -6,13 +6,14 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class KochLine {
   public static void mainDraw(Graphics graphics){
-      drawKochLine(10, 10, 10, 600, 0, graphics);
+      drawKochLine(6, 10, 10, 1200, 0, graphics);
   }
 
   public static void drawKochLine(int level, int xStart, int yStart, int length, int angle, Graphics graphics){
     int x2 = (int)(length * Math.cos(Math.toRadians(angle)));
     int y2 = (int)(length * Math.sin(Math.toRadians(angle)));
     if (level == 1) {
+      graphics.setColor(util.getRandomColor());
       graphics.drawLine(xStart, yStart, xStart + x2, yStart + y2);
     } else {
       drawKochLine(level -1, xStart, yStart, length/3, angle, graphics);
@@ -26,8 +27,8 @@ public class KochLine {
   }
 
   // Don't touch the code below
-  static int WIDTH = 640;
-  static int HEIGHT = 640;
+  static int WIDTH = 1280;
+  static int HEIGHT = 600;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
