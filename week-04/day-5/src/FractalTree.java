@@ -9,9 +9,9 @@ public class FractalTree {
     drawFractalTree(10, 20, 600, 600, graphics);
   }
 
-  public static void drawFractalTree(int level, int xPos, int yPos, int width, Graphics graphics) {
-    int length =(int)( width/4);
-      drawFractalTree(level, xPos + width/2, yPos, length, 270, graphics);
+  public static void drawFractalTree(int level, int xPos, int yPos, int lengthish, Graphics graphics) {
+    int length =(int)( lengthish/5);
+      drawFractalTree(level, xPos + lengthish/2, yPos, length, 270, graphics);
   }
 
   public static void drawFractalTree(int level, int xPos, int yPos, int length, int angle, Graphics graphics){
@@ -23,11 +23,17 @@ public class FractalTree {
       for(int i = 0; i < getRandomBranches(); i++) {
         if (i % 2 == 1) {
           drawFractalTree(
-              level - 1, x2, y2, util.aroundHalf(length), angle + (util.aroundHalf(30) * i), graphics
+              level - 1, x2, y2,
+              util.aroundHalf(length) + util.aroundQuarter(length),
+              angle + (util.aroundHalf(30) * i),
+              graphics
           );
         }
         drawFractalTree(
-            level - 1, x2, y2, util.aroundHalf(length), angle - (util.aroundHalf(30) * i), graphics
+            level - 1, x2, y2,
+            util.aroundHalf(length)+ util.aroundQuarter(length),
+            angle - (util.aroundHalf(30) * i),
+            graphics
         );
       }
     }
@@ -51,9 +57,6 @@ public class FractalTree {
     jFrame.setVisible(true);
     jFrame.pack();
     panel.setBackground(Color.WHITE);
-    while (true){
-      panel.repaint();
-    }
   }
 
   static class ImagePanel extends JPanel {
