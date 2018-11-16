@@ -21,6 +21,7 @@ public class boilerplate {
     jFrame.setLocationRelativeTo(null);
     jFrame.setVisible(true);
     jFrame.pack();
+    panel.setBackground(Color.WHITE);
   }
 
   static class ImagePanel extends JPanel {
