@@ -23,7 +23,7 @@ public class ShipName {
   private static String getRandomShipName() {
     List<String> shipNameList = getSourceContent();
     String randomShipName;
-    if (shipNameList.size() != 0) {
+    if (shipNameList.size() != 0 && shipNameList.size() != genericShipNameCounter) {
       do {
         int index = (int)(Math.random() * shipNameList.size());
         randomShipName = shipNameList.get(index);
