@@ -2,14 +2,12 @@ package garden;
 
 public class Plant {
   String color;
-  String type;
   double waterLevel;
   double necessaryWaterLevel;
   double waterEfficiency;
 
-  Plant(String color, String type, double necessaryWaterLevel, double waterEfficiency) {
+  Plant(String color, double necessaryWaterLevel, double waterEfficiency) {
     this.color = color;
-    this.type = type;
     this.waterLevel = 0;
     this.necessaryWaterLevel = necessaryWaterLevel;
     this.waterEfficiency = waterEfficiency;
@@ -23,13 +21,17 @@ public class Plant {
     waterLevel += waterAmount * waterEfficiency;
   }
 
-  String getStatus(){
-    String result = "The " + color + " " + type;
+  String getStatus() {
+    String result = "The " + color + " " + getType();
     if(needsWater()) {
       result += " needs water";
     } else {
       result += " doesn't need water";
     }
     return result;
+  }
+
+  String getType() {
+    return "Plant";
   }
 }
