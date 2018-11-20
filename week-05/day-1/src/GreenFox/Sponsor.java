@@ -17,7 +17,7 @@ public class Sponsor extends Person{
   void introduce() {
     System.out.println(
         "Hi, I'm " + this.name
-        + ", a " + this + age
+        + ", a " + this.age
         + " year old " + this.gender
         + " who represents " + this.company
         + " and hired " + this.hiredStudents

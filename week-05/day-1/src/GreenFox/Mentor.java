@@ -20,9 +20,9 @@ public class Mentor extends Person{
   void introduce() {
     System.out.println(
         "Hi, I'm " + this.name
-            + ", a " + this + age
-            + " year old " + this.gender
-            + this.level + "mentor"
+        + ", a " + this.age
+        + " year old " + this.gender
+        + " " + this.level + " mentor"
     );
   }
 }
