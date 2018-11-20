@@ -1,4 +1,4 @@
-package GreenFox;
+package greenFox;
 
 public class Person {
   String name;

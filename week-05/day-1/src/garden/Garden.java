@@ -1,4 +1,4 @@
-package Garden;
+package garden;
 
 import java.util.ArrayList;
 import java.util.List;

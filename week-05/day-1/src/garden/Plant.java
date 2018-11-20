@@ -1,4 +1,4 @@
-package Garden;
+package garden;
 
 public class Plant {
   String color;

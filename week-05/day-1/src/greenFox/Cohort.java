@@ -1,4 +1,4 @@
-package GreenFox;
+package greenFox;
 
 import java.util.ArrayList;
 import java.util.List;

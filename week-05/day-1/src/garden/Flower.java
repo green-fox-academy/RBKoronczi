@@ -1,4 +1,4 @@
-package Garden;
+package garden;
 
 public class Flower extends Plant {
   Flower(String color) {
