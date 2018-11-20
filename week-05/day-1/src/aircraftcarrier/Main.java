@@ -17,11 +17,9 @@ public class Main {
       while (avalon.healthPoints > 0) {
         enterprise.fill();
         System.out.println(enterprise.getStatus());
-        System.out.println();
         enterprise.fight(avalon);
         System.out.println("Enemy Status:");
         System.out.println(avalon.getStatus());
-        System.out.println();
       }
     } catch (Exception e) {
       System.out.println("We're out of Ammo!");

@@ -47,7 +47,7 @@ public class AircraftCarrier {
     String aircraftStatuses = "";
     int totalDamage = 0;
     if(aircrafts.size() == 0) {
-      aircraftStatuses = "<none>";
+      aircraftStatuses = "<none>" + System.lineSeparator();
     }
     for(Aircraft plane : aircrafts) {
       totalDamage += plane.ammo * plane.damage;
