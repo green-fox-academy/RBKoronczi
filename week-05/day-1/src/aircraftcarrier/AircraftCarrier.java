@@ -33,16 +33,22 @@ public class AircraftCarrier {
   }
 
   void fight(AircraftCarrier otherCarrier) {
-    int TotalDamage = 0;
+    int totalDamage = 0;
     for(Aircraft plane : aircrafts) {
-      TotalDamage += plane.fight();
+      totalDamage += plane.fight();
     }
-    otherCarrier.healthPoints -= TotalDamage;
+    otherCarrier.healthPoints -= totalDamage;
   }
 
   String getStatus() {
+    if(healthPoints <= 0) {
+      return "It's dead Jim! :(";
+    }
     String aircraftStatuses = "";
     int totalDamage = 0;
+    if(aircrafts.size() == 0) {
+      aircraftStatuses = "<none>";
+    }
     for(Aircraft plane : aircrafts) {
       totalDamage += plane.ammo * plane.damage;
       aircraftStatuses += plane.getStatus() + System.lineSeparator();
