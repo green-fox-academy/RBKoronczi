@@ -5,7 +5,7 @@ public class Aircraft {
   int maxAmmo;
   int damage;
   String type;
-  boolean isPriority;
+  private boolean isPriority;
 
   Aircraft(String type, int maxAmmo, int damage, boolean isPriority) {
     this.type = type;
@@ -16,7 +16,9 @@ public class Aircraft {
   }
 
   int fight() {
-    return ammo * damage;
+    int totalDamage = ammo * damage;
+    ammo = 0;
+    return totalDamage;
   }
 
   int refill(int totalAmmo) {
