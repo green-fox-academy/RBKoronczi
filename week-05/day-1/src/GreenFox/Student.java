@@ -27,7 +27,8 @@ public class Student extends Person {
         + " year old " + this.gender
         + "from " + this.previousOrganization
         + "who skipped " + this.skippedDays
-        + "days from the course already.");
+        + "days from the course already."
+    );
   }
 
   void skipDays(int numberOfDays) {

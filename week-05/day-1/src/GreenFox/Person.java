@@ -12,9 +12,7 @@ public class Person {
   }
 
   Person() {
-    this.name = "Jane Doe";
-    this.age = 30;
-    this.gender = "female";
+    this("Jane Doe", 30, "female");
   }
 
   void introduce() {
