@@ -4,11 +4,9 @@ public class Aircraft {
   int ammo;
   int maxAmmo;
   int damage;
-  String type;
   private boolean isPriority;
 
-  Aircraft(String type, int maxAmmo, int damage, boolean isPriority) {
-    this.type = type;
+  Aircraft(int maxAmmo, int damage, boolean isPriority) {
     this.maxAmmo = maxAmmo;
     this.damage = damage;
     ammo = 0;
@@ -33,11 +31,14 @@ public class Aircraft {
   }
 
   String getType() {
-    return type;
+    return "Plane";
   }
 
   String getStatus() {
-    return "Type " + type + ", Ammo: " + ammo + ", Base Damage: " + damage + ", All Damage: " + this.damage * this.ammo;
+    return "Type: " + getType()
+        + ", Ammo: " + ammo
+        + ", Base Damage: " + damage
+        + ", All Damage: " + this.damage * this.ammo;
   }
 
   boolean isPriority(){
