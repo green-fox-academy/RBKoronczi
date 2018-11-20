@@ -7,8 +7,6 @@ public class Main {
 
     for (int i = 0; i < 3; i++) {
       enterprise.add(new F35());
-    }
-    for (int i = 0; i < 3; i++) {
       enterprise.add(new F16());
     }
 
