@@ -8,8 +8,8 @@ public class Reservation implements Reservationy {
   private String codeBooking;
   private static List<String> usedCodes = new ArrayList<>();
 
-  public Reservation(String dow){
-    this.dowBooking = dow;
+  public Reservation(){
+    this.dowBooking = getRandomDOW();
     this.codeBooking = generateCode();
     usedCodes.add(this.codeBooking);
   }
@@ -22,8 +22,14 @@ public class Reservation implements Reservationy {
     return codeBooking;
   }
 
-  public String toString(){
+  public String toString() {
     return "Booking# " + codeBooking + " for " + dowBooking;
+  }
+
+  private static String getRandomDOW(){
+    String[] dows = {"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"};
+    int randomDow = (int)(Math.random() * 7);
+    return dows[randomDow];
   }
 
   private static String generateCode() {
