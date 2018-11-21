@@ -1,11 +1,12 @@
 package reservation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Reservation implements Reservationy {
   private String dowBooking;
   private String codeBooking;
-  private static List<String> usedCodes;
+  private static List<String> usedCodes = new ArrayList<>();
 
   public Reservation(String dow){
     this.dowBooking = dow;
@@ -26,12 +27,13 @@ public class Reservation implements Reservationy {
   }
 
   private static String generateCode() {
-    String result = "";
+    String result;
     do {
+      result = "";
      for(int i = 0; i < 8; i++){
        result += getRandomUppercaseChar();
      }
-    } while (!usedCodes.contains(result));
+    } while (usedCodes.contains(result));
     return result;
   }
 
