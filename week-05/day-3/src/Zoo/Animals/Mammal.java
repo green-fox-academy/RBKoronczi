@@ -1,4 +1,4 @@
-package Zoo;
+package Zoo.Animals;
 
 public class Mammal extends Animal{
   public Mammal(String name) {

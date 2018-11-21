@@ -1,4 +1,6 @@
-package Zoo;
+package Zoo.Animals;
+
+import Zoo.Zoo;
 
 public abstract class Animal {
   protected String name;

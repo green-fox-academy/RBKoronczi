@@ -1,7 +1,7 @@
-package Zoo;
+package Zoo.Animals;
 
 public class Reptile extends EggLayer {
-  Reptile(String name) {
+  public Reptile(String name) {
     super(name);
   }
 }
