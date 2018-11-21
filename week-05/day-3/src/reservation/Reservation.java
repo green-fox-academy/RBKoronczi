@@ -8,8 +8,12 @@ public class Reservation implements Reservationy {
   private String codeBooking;
   private static List<String> usedCodes = new ArrayList<>();
 
-  public Reservation(){
-    this.dowBooking = getRandomDOW();
+  public Reservation() {
+    this(getRandomDOW());
+  }
+
+  public Reservation(String dow) {
+    this.dowBooking = dow;
     this.codeBooking = generateCode();
     usedCodes.add(this.codeBooking);
   }
