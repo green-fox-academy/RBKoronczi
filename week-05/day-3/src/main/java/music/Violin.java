@@ -1,10 +1,10 @@
 package main.java.music;
 
 public class Violin extends StringedInstrument {
-  Violin() {
+  public Violin() {
     this(4);
   }
-  Violin(int number) {
+  public Violin(int number) {
     this.numberOfStrings = number;
     this.name = "Violin";
   }

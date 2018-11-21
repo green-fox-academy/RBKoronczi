@@ -1,10 +1,10 @@
 package main.java.music;
 
 public class BassGuitar extends StringedInstrument {
-  BassGuitar() {
+  public BassGuitar() {
     this(4);
   }
-  BassGuitar(int number) {
+  public BassGuitar(int number) {
     this.numberOfStrings = number;
     this.name = "Bass Guitar";
   }
