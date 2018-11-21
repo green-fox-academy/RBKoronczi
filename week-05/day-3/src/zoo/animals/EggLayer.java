@@ -1,4 +1,4 @@
-package Zoo.Animals;
+package zoo.animals;
 
 public abstract class EggLayer extends Animal {
   public EggLayer(String name) {

@@ -1,5 +1,5 @@
-package Zoo;
-import Zoo.Animals.*;
+package zoo;
+import zoo.animals.*;
 
 public class Zoo {
 
