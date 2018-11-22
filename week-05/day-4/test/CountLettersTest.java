@@ -8,13 +8,13 @@ class CountLettersTest {
   @Test
   public void countLettersTest1() {
     String string = "Ezegyteszt";
-    HashMap<Character, Integer> test = new HashMap<>();
-    test.put('e', 3);
-    test.put('z', 2);
-    test.put('g', 1);
-    test.put('y', 1);
-    test.put('t', 2);
-    test.put('s', 1);
-    assertEquals(CountLetters.countLetters(string), test);
+    HashMap<Character, Integer> testMap = new HashMap<>();
+    testMap.put('e', 3);
+    testMap.put('z', 2);
+    testMap.put('g', 1);
+    testMap.put('y', 1);
+    testMap.put('t', 2);
+    testMap.put('s', 1);
+    assertEquals(CountLetters.countLetters(string), testMap);
   }
 }
