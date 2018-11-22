@@ -2,14 +2,13 @@ import java.util.HashMap;
 
 public class AnagramCheck {
   public static boolean anagramCheck(String wordOne, String wordTwo) {
-    wordOne = wordOne.toLowerCase();
-    wordTwo = wordTwo.toLowerCase();
     HashMap<Character, Integer> wordOneCharacterSet = createHashMapFromString(wordOne);
     HashMap<Character, Integer> wordTwoCharacterSet = createHashMapFromString(wordTwo);
     return (wordOneCharacterSet.equals(wordTwoCharacterSet));
   }
 
-  private static HashMap<Character, Integer> createHashMapFromString(String string){
+  static HashMap<Character, Integer> createHashMapFromString(String string){
+    string = string.toLowerCase();
     HashMap<Character, Integer> characterMap = new HashMap();
     char[] characters = string.toCharArray();
     for (char character : characters) {
