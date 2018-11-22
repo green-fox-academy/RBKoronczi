@@ -61,6 +61,7 @@ public class CowsAndBulls {
     ArrayList<Integer> userNum = new ArrayList<>();
     for(int i = 0; i < 4; i++) {
       int numeral = number / (1000 / (int)Math.pow(10, i));
+      number -= numeral * (1000 / (int)Math.pow(10, i));
       userNum.add(numeral);
     }
     return userNum;
@@ -70,7 +71,7 @@ public class CowsAndBulls {
     return counter;
   }
 
-  public boolean getIsPlaying() {
+  public boolean isPlaying() {
     return isPlaying;
   }
 }
