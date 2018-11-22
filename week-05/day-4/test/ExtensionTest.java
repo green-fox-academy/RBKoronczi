@@ -22,6 +22,11 @@ class ExtensionTest {
   }
 
   @Test
+  void testAdd_to6() {
+    assertEquals(6, extension.add(1, 5));
+  }
+
+  @Test
   void testMaxOfThree_first() {
     assertEquals(5, extension.maxOfThree(5, 4, 3));
   }
@@ -32,13 +37,23 @@ class ExtensionTest {
   }
 
   @Test
+  void testMaxOfThree_fourth() {
+    assertEquals(4, extension.maxOfThree(3, 4, 2));
+  }
+
+  @Test
   void testMedian_four() {
-    assertEquals(5, extension.median(Arrays.asList(7,5,3,5)));
+    assertEquals(4, extension.median(Arrays.asList(7,5,3,5)));
   }
 
   @Test
   void testMedian_five() {
     assertEquals(3, extension.median(Arrays.asList(1,2,3,4,5)));
+  }
+
+  @Test
+  void testMedian_six() {
+    assertEquals(3.5, extension.median(Arrays.asList(1,2,3,4,5,6)));
   }
 
   @Test
@@ -49,6 +64,11 @@ class ExtensionTest {
   @Test
   void testIsVowel_u() {
     assertTrue(extension.isVowel('u'));
+  }
+
+  @Test
+  void testIsVowel_y() {
+    assertTrue(extension.isVowel('y'));
   }
 
   @Test
