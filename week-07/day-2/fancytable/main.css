@@ -1,16 +1,41 @@
 body {
     margin: 0;
-    font-family: consolas, courier;
-    font-size: 14pt;
-    color: white;
-    padding: 0% 10%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18pt;
+    color: #666B84;
     background: #4396E9;
 }
 
 table {
-    background: lightgrey;
+    background: #EBEBEB;
+    margin: auto;
+    margin-top: 200px;
+    border-collapse: collapse;
+    width: 80%;
 }
 
 thead {
+    font-size: 24pt;
     background: black;
+    color: #CDD5DD;
+}
+
+tr:nth-child(even) {
+    background: #FFFFFF;
+}
+
+td, th {
+    padding: 1rem;
+    text-align: left;
+    width: 50%;
+    border: 2px #666B84 solid;
+}
+
+th {
+    font-weight: normal;
+    border-bottom: 4px 9EA7AF;
+}
+
+.dollars::before {
+    content:'$ ';
 }
