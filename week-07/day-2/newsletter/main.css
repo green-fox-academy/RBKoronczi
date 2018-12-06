@@ -1,0 +1,45 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #EBEBEB;
+    color: #515151
+}
+
+form {
+    background: #FFFFFF;
+    font-variant-caps: all-small-caps;
+    margin: 50px auto;
+    padding: 1.5em 5%;
+    width: 320px;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+input {
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #E7E7E7;
+}
+
+input:focus {
+    border-color: #77A171;
+    outline: 0;
+}
+
+button {
+    margin: 2.5em 0 0 0;
+    background-color: #333333;
+    color: white;
+    padding: 1em;
+    border-radius: 40px;
+    width: 125px;
+    border: 0px;
+}
+
+button:focus {
+    outline: 0;
+}
