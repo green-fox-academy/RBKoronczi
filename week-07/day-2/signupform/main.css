@@ -1,0 +1,100 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #EBEBEB;
+    color: #515151
+}
+
+.main {
+    background: #FFFFFF;
+    margin: 50px auto;
+    padding: 1.5em 5%;
+    width: 80%;
+    font-size: 14pt;
+    border-radius: 2px;
+    box-shadow: rgb(172, 172, 172) 10px 5px 5px;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#formDiv {
+    width: 40%;
+}
+
+#linkDiv {
+    width: 40%;
+}
+
+.formFields {
+    margin: 1em;
+}
+
+#or {
+    background-color: #DDDDDD;
+    border-radius: 2em;
+    padding: 1em;
+    margin: auto;
+    box-shadow: rgb(172, 172, 172) 10px 5px 5px;
+}
+
+.linkColumn {
+    list-style-type: none;
+    padding-inline-start: 0;
+    text-align: center;
+}
+
+.links {
+    padding: 1em;
+    margin: 1em;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+#facebook {
+    background-color: #3b5998;
+}
+
+#twitter {
+    background-color: #1da1f2;
+}
+
+#googleplus {
+    background-color: #d34836;
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+input {
+    padding: 0.5em 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #727272;
+    font-size: 18pt;
+}
+
+input:focus {
+    border-bottom: 3px #77A171 solid;
+    outline: 0;
+}
+
+button {
+    margin: 2.5em 0 0 0;
+    background-color: #16A085;
+    color: white;
+    padding: 1em;
+    width: 125px;
+    border: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:focus {
+    outline: 0;
+}

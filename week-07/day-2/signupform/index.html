@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Sign Up</h1>
+        <div class="box">
+            <div id="formDiv">
+                <form id="signupForm">
+                    <div class="formFields"><input type="text" name="name" required placeholder="Name"></div>
+                    <div class="formFields"><input type="email" name="email" required placeholder="E-mail"></div>
+                    <div class="formFields"><input type="password" name="password" required placeholder="Password"></div>
+                    <div class="formFields"><input type="password" name="passwordConfirmation" required placeholder="Retype password"></div>
+                </form>
+            </div>
+            <div id="or">
+                OR
+            </div>
+            <div id="linkDiv">
+                <ul class="linkColumn">
+                    <li class="links" id="facebook"><a href="#">Log in with facebook</a></li>
+                    <li class="links" id="twitter"><a href="#">Log in with Twitter</a></li>
+                    <li class="links" id="googleplus"><a href="#">Log in with Google+</a></li>
+                </ul>
+            </div>
+        </div>
+        <button type="submit" form="signupForm">Sign me up</button>
+    </div>
+</body>
+
+</html>
