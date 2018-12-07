@@ -20,33 +20,35 @@ public class ListOfItemsInShop {
     shopItemList = ShopItemFileHandler.readItemsFromFile();
   }
 
-  public void sortOnlyAvailable() {
+  public List<ShopItem> sortOnlyAvailable() {
     List<ShopItem> result = new ArrayList<>();
-    for(ShopItem item : shopItemList) {
-      if(item.getQty() > 0) {
+    for (ShopItem item : shopItemList) {
+      if (item.getQty() > 0) {
         result.add(item);
       }
     }
-    shopItemList = result;
+    return result;
   }
 
-  public void cheapestFirst() {
-    Collections.sort(shopItemList);
+  public List<ShopItem> cheapestFirst() {
+    List<ShopItem> result = shopItemList;
+    Collections.sort(result);
+    return result;
   }
 
-  public void contains(String string) {
+  public List<ShopItem> contains(String string) {
     List<ShopItem> result = new ArrayList<>();
-    for(ShopItem item : shopItemList) {
-      if(item.getDescription().contains(string) || item.getName().contains(string)) {
+    for (ShopItem item : shopItemList) {
+      if (item.getDescription().contains(string) || item.getName().contains(string)) {
         result.add(item);
       }
     }
-    shopItemList = result;
+     return result;
   }
 
   public double getAvgStock() {
     double avg = 0;
-    for(ShopItem item : shopItemList) {
+    for (ShopItem item : shopItemList) {
       avg += item.getQty();
     }
     avg /= shopItemList.size();
@@ -57,7 +59,7 @@ public class ListOfItemsInShop {
     double maxPrice = 0;
     String result = "";
     for (ShopItem item : shopItemList) {
-      if(item.getPrice() > maxPrice) {
+      if (item.getPrice() > maxPrice) {
         maxPrice = item.getPrice();
         result = item.getName();
       }
@@ -68,7 +70,7 @@ public class ListOfItemsInShop {
   public String toString() {
     String result = "";
     for (ShopItem item : shopItemList) {
-      result +="ITEM: ";
+      result += "ITEM: ";
       result += item;
       result += System.lineSeparator();
     }

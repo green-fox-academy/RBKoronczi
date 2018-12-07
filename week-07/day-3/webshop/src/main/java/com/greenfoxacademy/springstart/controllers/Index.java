@@ -1,47 +1,43 @@
 package com.greenfoxacademy.springstart.controllers;
 
 import com.greenfoxacademy.springstart.main.ListOfItemsInShop;
+import com.greenfoxacademy.springstart.main.ShopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 public class Index {
+  private static ListOfItemsInShop shop = new ListOfItemsInShop();
 
   @RequestMapping("/")
   public String allItems(Model model) {
-    ListOfItemsInShop shop = new ListOfItemsInShop();
-    addItemListToModel(model, shop);
+    addItemListToModel(model, shop.getShopItemList());
     return "shop";
   }
 
   @RequestMapping("/onlyAvailable")
   public String onlyAvailable(Model model) {
-    ListOfItemsInShop shop = new ListOfItemsInShop();
-    shop.sortOnlyAvailable();
-    addItemListToModel(model, shop);
+    addItemListToModel(model, shop.sortOnlyAvailable());
     return "shop";
   }
 
   @RequestMapping("/cheapestFirst")
   public String cheapestFirst(Model model) {
-    ListOfItemsInShop shop = new ListOfItemsInShop();
-    shop.cheapestFirst();
-    addItemListToModel(model, shop);
+    addItemListToModel(model, shop.cheapestFirst());
     return "shop";
   }
 
   @RequestMapping("/containsNike")
   public String containsNike(Model model) {
-    ListOfItemsInShop shop = new ListOfItemsInShop();
-    shop.contains("Nike");
-    addItemListToModel(model, shop);
+    addItemListToModel(model, shop.contains("Nike"));
     return "shop";
   }
 
   @RequestMapping("/averageStock")
   public String averageStock(Model model) {
-    ListOfItemsInShop shop = new ListOfItemsInShop();
     double stock = shop.getAvgStock();
     String result = "Average Stock: " + stock;
     model.addAttribute("text", result);
@@ -50,19 +46,18 @@ public class Index {
 
   @RequestMapping("/mostExpensive")
   public String mostExpensive(Model model) {
-    ListOfItemsInShop shop = new ListOfItemsInShop();
     String name = shop.getMostExpensive();
     String result = "The most expensive item is: " + name;
     model.addAttribute("text", result);
     return "shopSingle";
   }
 
-  private void addItemListToModel(Model model, ListOfItemsInShop shop) {
+  private void addItemListToModel(Model model, List<ShopItem> list) {
     try {
-      model.addAttribute("items", shop.getShopItemList());
+      model.addAttribute("items", list);
     } catch (NullPointerException eX) {
       System.err.println(eX.getMessage());
-      System.err.println(shop);
+      System.err.println(list);
     }
   }
 }
