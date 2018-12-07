@@ -1,8 +1,7 @@
 package com.greenfoxacademy.springstart.main;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,34 +34,23 @@ public class ListOfItemsInShop {
   }
 
   public List<ShopItem> contains(String string) {
-    List<ShopItem> result = new ArrayList<>();
-    for (ShopItem item : shopItemList) {
-      if (item.getDescription().contains(string) || item.getName().contains(string)) {
-        result.add(item);
-      }
-    }
-     return result;
+    return shopItemList.stream()
+        .filter(ShopItem -> ShopItem.getName().toLowerCase().contains(string.toLowerCase())
+            || ShopItem.getDescription().toLowerCase().contains(string.toLowerCase()))
+        .collect(Collectors.toList());
   }
 
   public double getAvgStock() {
-    double avg = 0;
-    for (ShopItem item : shopItemList) {
-      avg += item.getQty();
-    }
-    avg /= shopItemList.size();
-    return avg;
+    DoubleSummaryStatistics stats = shopItemList.stream()
+        .mapToDouble(ShopItem::getQty)
+        .summaryStatistics();
+    return stats.getAverage();
   }
 
   public String getMostExpensive() {
-    double maxPrice = 0;
-    String result = "";
-    for (ShopItem item : shopItemList) {
-      if (item.getPrice() > maxPrice) {
-        maxPrice = item.getPrice();
-        result = item.getName();
-      }
-    }
-    return result;
+    return shopItemList.stream()
+        .max(ShopItem::compareTo)
+        .get().getName();
   }
 
   public String toString() {
