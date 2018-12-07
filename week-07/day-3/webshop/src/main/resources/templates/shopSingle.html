@@ -15,19 +15,16 @@
             <a href="/cheapestFirst">Cheapest First</a>
             <a href="/containsNike">Contains Nike</a>
             <a href="/averageStock">Average Stock</a>
-            <a href="#">Most Expensive Available</a>
+            <a href="/mostExpensive">Most Expensive Available</a>
         </nav>
     </div>
     <table>
         <thead>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Price</th>
-            <th>Quantity of Stock</th>
+            <th th:text="'' + ${text}"></th>
         </thead>
         <tbody>
             <tr>
-                <td id="singleElement" th:text="'' + ${string}"></td>
+                <td></td>
             </tr>
         </tbody>
     </table>

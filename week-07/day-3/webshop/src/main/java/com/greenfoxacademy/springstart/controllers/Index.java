@@ -43,7 +43,18 @@ public class Index {
   public String averageStock(Model model) {
     ListOfItemsInShop shop = new ListOfItemsInShop();
     double stock = shop.getAvgStock();
+    String result = "Average Stock: " + stock;
+    model.addAttribute("text", result);
     model.addAttribute("string", stock);
+    return "shopSingle";
+  }
+
+  @RequestMapping("/mostExpensive")
+  public String mostExpensive(Model model) {
+    ListOfItemsInShop shop = new ListOfItemsInShop();
+    String name = shop.getMostExpensive();
+    String result = "The most expensive item is: " + name;
+    model.addAttribute("text", result);
     return "shopSingle";
   }
 
