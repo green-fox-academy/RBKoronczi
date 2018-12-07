@@ -1,0 +1,5 @@
+Running shoes;Nike running shoes for everyday sport;1000.0;5
+Printer;Some HP printer that will print pages;3000.0;2
+Coca cola;0.5l standard coke;25.0;0
+Wokin;Chicken with fried rice and WOKIN sauce;119.0;100
+T-shirt;Blue with a corgi on a bike;300.0;1

@@ -15,6 +15,6 @@ public class ListOfItemsInShop {
   }
 
   public void getItemsFromFile() {
-
+    shopItemList = ShopItemFileHandler.readItemsFromFile();
   }
 }
