@@ -4,6 +4,7 @@ import com.greenfoxacademy.springstart.main.ListOfItemsInShop;
 import com.greenfoxacademy.springstart.main.ShopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -50,6 +51,12 @@ public class Index {
     String result = "The most expensive item is: " + name;
     model.addAttribute("text", result);
     return "shopSingle";
+  }
+
+  @PostMapping(value="/search")
+  public String Search(Model model, String input) {
+    addItemListToModel(model, shop.contains(input));
+    return "shop";
   }
 
   private void addItemListToModel(Model model, List<ShopItem> list) {

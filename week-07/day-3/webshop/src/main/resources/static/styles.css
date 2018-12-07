@@ -31,7 +31,7 @@ nav > a {
     margin: 0 10px;
 }
 
-#searchbar {
+#searchBar {
     display: flex;
     justify-content: center;
     margin: 30px;

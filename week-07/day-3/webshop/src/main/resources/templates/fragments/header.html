@@ -14,8 +14,8 @@
         <a href="/averageStock">Average Stock</a>
         <a href="/mostExpensive">Most Expensive Available</a>
     </nav>
-    <form id ="searchbar">
-        <input type="text" placeholder="...something like Nike">
+    <form id ="searchBar" method="POST" action="/search">
+        <input type="text" name="input" placeholder="...something like Nike">
         <button type="submit">Search</button>
     </form>
 </div>
