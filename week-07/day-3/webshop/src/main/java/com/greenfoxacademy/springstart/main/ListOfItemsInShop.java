@@ -2,7 +2,9 @@ package com.greenfoxacademy.springstart.main;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListOfItemsInShop {
   private List<ShopItem> shopItemList;
@@ -21,19 +23,15 @@ public class ListOfItemsInShop {
   }
 
   public List<ShopItem> sortOnlyAvailable() {
-    List<ShopItem> result = new ArrayList<>();
-    for (ShopItem item : shopItemList) {
-      if (item.getQty() > 0) {
-        result.add(item);
-      }
-    }
-    return result;
+    return shopItemList.stream()
+        .filter(shopItem -> shopItem.getQty() > 0)
+        .collect(Collectors.toList());
   }
 
   public List<ShopItem> cheapestFirst() {
-    List<ShopItem> result = shopItemList;
-    Collections.sort(result);
-    return result;
+    return shopItemList.stream()
+        .sorted(ShopItem::compareTo)
+        .collect(Collectors.toList());
   }
 
   public List<ShopItem> contains(String string) {

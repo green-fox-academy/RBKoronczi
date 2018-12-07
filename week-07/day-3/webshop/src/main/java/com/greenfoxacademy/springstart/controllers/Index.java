@@ -54,7 +54,7 @@ public class Index {
   }
 
   @PostMapping(value="/search")
-  public String Search(Model model, String input) {
+  public String search(Model model, String input) {
     addItemListToModel(model, shop.contains(input));
     return "shop";
   }
