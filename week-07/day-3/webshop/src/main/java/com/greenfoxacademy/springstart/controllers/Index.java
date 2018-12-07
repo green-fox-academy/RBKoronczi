@@ -45,7 +45,6 @@ public class Index {
     double stock = shop.getAvgStock();
     String result = "Average Stock: " + stock;
     model.addAttribute("text", result);
-    model.addAttribute("string", stock);
     return "shopSingle";
   }
 
