@@ -31,9 +31,38 @@ nav > a {
     margin: 0 10px;
 }
 
+#searchbar {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+input {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #E7E7E7;
+    width: 60%;
+}
+
+input:focus {
+    border-color: #77A171;
+    outline: 0;
+}
+
+button {
+    padding: 1em;
+    border-color: #77A171;
+    border-radius: 0.5em;
+    background-color: white;
+}
+
+button:focus {
+    outline: 0;
+}
+
 table {
     width: 90%;
-    margin: 100px auto;
+    margin: 2em auto;
     border-collapse: collapse;
 }
 
