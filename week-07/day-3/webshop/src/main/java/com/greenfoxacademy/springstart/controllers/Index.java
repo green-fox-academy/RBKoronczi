@@ -11,9 +11,40 @@ public class Index {
   @RequestMapping("/")
   public String allItems(Model model) {
     ListOfItemsInShop shop = new ListOfItemsInShop();
-    shop.getItemsFromFile();
     addItemListToModel(model, shop);
     return "shop";
+  }
+
+  @RequestMapping("/onlyAvailable")
+  public String onlyAvailable(Model model) {
+    ListOfItemsInShop shop = new ListOfItemsInShop();
+    shop.sortOnlyAvailable();
+    addItemListToModel(model, shop);
+    return "shop";
+  }
+
+  @RequestMapping("/cheapestFirst")
+  public String cheapestFirst(Model model) {
+    ListOfItemsInShop shop = new ListOfItemsInShop();
+    shop.cheapestFirst();
+    addItemListToModel(model, shop);
+    return "shop";
+  }
+
+  @RequestMapping("/containsNike")
+  public String containsNike(Model model) {
+    ListOfItemsInShop shop = new ListOfItemsInShop();
+    shop.contains("Nike");
+    addItemListToModel(model, shop);
+    return "shop";
+  }
+
+  @RequestMapping("/averageStock")
+  public String averageStock(Model model) {
+    ListOfItemsInShop shop = new ListOfItemsInShop();
+    double stock = shop.getAvgStock();
+    model.addAttribute("string", stock);
+    return "shopSingle";
   }
 
   private void addItemListToModel(Model model, ListOfItemsInShop shop) {

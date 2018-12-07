@@ -1,6 +1,6 @@
 package com.greenfoxacademy.springstart.main;
 
-public class ShopItem {
+public class ShopItem implements Comparable<ShopItem> {
   private String name;
   private String description;
   private double price;
@@ -27,6 +27,15 @@ public class ShopItem {
 
   public int getQty() {
     return qty;
+  }
+
+  public int compareTo(ShopItem otherItem) {
+    if(this.price < otherItem.price) {
+      return -1;
+    } else if (this.price > otherItem.price) {
+      return 1;
+    }
+    return 0;
   }
 
   public String toString() {
