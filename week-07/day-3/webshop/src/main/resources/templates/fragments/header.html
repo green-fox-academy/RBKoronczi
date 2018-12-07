@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+</head>
+<body>
+<div class="header" th:fragment="header">
+    <h1>Kiki's Awesome <a id="headerLink" href="/">Webshop</a></h1>
+    <nav>
+        <a href="/onlyAvailable">Only Available</a>
+        <a href="/cheapestFirst">Cheapest First</a>
+        <a href="/containsNike">Contains Nike</a>
+        <a href="/averageStock">Average Stock</a>
+        <a href="/mostExpensive">Most Expensive Available</a>
+    </nav>
+</div>
+</body>
+</html>

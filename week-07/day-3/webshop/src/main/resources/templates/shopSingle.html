@@ -1,32 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Kiki's Awesome Webshop</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 <div class="main">
-    <div class="header">
-        <h1>Kiki's Awesome <a href="/">Webshop</a></h1>
-        <nav>
-            <a href="/onlyAvailable">Only Available</a>
-            <a href="/cheapestFirst">Cheapest First</a>
-            <a href="/containsNike">Contains Nike</a>
-            <a href="/averageStock">Average Stock</a>
-            <a href="/mostExpensive">Most Expensive Available</a>
-        </nav>
+    <div th:replace="fragments/header :: header">
     </div>
     <table>
-        <thead>
-            <th th:text="'' + ${text}"></th>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
+            <p class="singleLineOut" th:text="${text}"></p>
     </table>
 </div>
 </body>
