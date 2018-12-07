@@ -15,7 +15,6 @@ public class ShopItemFileHandler {
     List<ShopItem> shopItemList = new ArrayList<>();
     for (String row: content) {
       shopItemList.add(getItemFromRow(row));
-      System.err.println(getItemFromRow(row));
     }
     return shopItemList;
   }

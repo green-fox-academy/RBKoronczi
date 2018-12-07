@@ -1,26 +1,27 @@
 package com.greenfoxacademy.springstart.controllers;
 
 import com.greenfoxacademy.springstart.main.ListOfItemsInShop;
-import com.greenfoxacademy.springstart.main.ShopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.List;
-
 @Controller
 public class Index {
-  ListOfItemsInShop shop;
 
-  Index() {
+  @RequestMapping("/")
+  public String allItems(Model model) {
     ListOfItemsInShop shop = new ListOfItemsInShop();
     shop.getItemsFromFile();
+    addItemListToModel(model, shop);
+    return "shop";
   }
 
-  @RequestMapping("")
-  public String allItems(Model model) {
-    List<ShopItem> shopItemsList = shop.getShopItemList();
-    model.addAttribute("items", shopItemsList);
-    return "shop";
+  private void addItemListToModel(Model model, ListOfItemsInShop shop) {
+    try {
+      model.addAttribute("items", shop.getShopItemList());
+    } catch (NullPointerException eX) {
+      System.err.println(eX.getMessage());
+      System.err.println(shop);
+    }
   }
 }
