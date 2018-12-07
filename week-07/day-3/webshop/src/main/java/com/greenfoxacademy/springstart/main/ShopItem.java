@@ -28,4 +28,8 @@ public class ShopItem {
   public int getQty() {
     return qty;
   }
+
+  public String toString() {
+    return "" + this.name + " " + this.description + " " + this.price + " " + this.qty;
+  }
 }

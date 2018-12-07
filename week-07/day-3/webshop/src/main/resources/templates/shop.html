@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <h1>Kiki's Awesome Webshop</h1>
+        <nav>
+            <a href="#">Only Available</a>
+            <a href="#">Cheapest First</a>
+            <a href="#">Contains Nike</a>
+            <a href="#">Average Stock</a>
+            <a href="#">Most Expensive Available</a>
+        </nav>
+    </div>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity of Stock</th>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${items}">
+                <td th:text="${item.getName()}"></td>
+                <td th:text="${item.getDescription()}"></td>
+                <td th:text="${item.getPrice()}"></td>
+                <td th:text="${item.getQty()}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -6,7 +6,7 @@ import java.util.List;
 public class ListOfItemsInShop {
   private List<ShopItem> shopItemList;
 
-  ListOfItemsInShop() {
+  public ListOfItemsInShop() {
     shopItemList = new ArrayList<>();
   }
 
