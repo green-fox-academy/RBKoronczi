@@ -32,3 +32,11 @@ LEFT JOIN Likes l1 ON l1.ID1 = h.ID
 LEFT JOIN Likes l2 ON l2.ID2 = h.ID
 WHERE l1.ID1 IS NULL AND l2.ID2 IS NULL
 ORDER BY h.grade, h.name;
+
+--#Q5
+SELECT DISTINCT h.name, h.grade, l.name, l.grade
+FROM Highschooler h
+INNER JOIN Likes ON Likes.ID1 = h.ID
+INNER JOIN Highschooler l ON l.ID = Likes.ID2
+LEFT JOIN Likes lNone ON lNone.ID1 = l.ID
+WHERE lNone.ID1 IS NULL;
