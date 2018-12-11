@@ -1,0 +1,21 @@
+CREATE DATABASE ToDo
+
+use ToDo
+
+CREATE TABLE users (
+id INT NOT NULL AUTO_INCREMENT,
+firstName VARCHAR(30) NOT NULL,
+lastName VARCHAR(30) NOT NULL,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE tasks (
+taskID INT NOT NULL AUTO_INCREMENT,
+userID INT NOT NULL,
+name VARCHAR(80) NOT NULL,
+description BLOB,
+isComplete BOOLEAN,
+deadLine DATE,
+PRIMARY KEY (taskID),
+FOREIGN KEY (userID) REFERENCES users(id)
+);
