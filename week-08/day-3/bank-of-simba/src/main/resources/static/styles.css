@@ -37,6 +37,10 @@ table {
     border-collapse: collapse;
 }
 
+.king {
+    color: gold;
+}
+
 td, th {
     padding: 1rem;
     text-align: left;

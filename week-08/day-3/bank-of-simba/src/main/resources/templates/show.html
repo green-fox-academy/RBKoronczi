@@ -14,13 +14,23 @@
             <th>Name</th>
             <th>Balance</th>
             <th>Animal Type</th>
+            <th></th>
+            <th>Alignment</th>
+            <th>Add Food</th>
             </thead>
             <tbody>
-                <tr th:each="account : ${accounts}">
+                <tr th:each="account : ${accounts}" th:class="${account.isKing()}? 'king' : 'commoner'">
                     <td class="tableIndex" th:text="${accountStat.index}"></td>
                     <td class="name" th:text="${account.getName()}"></td>
                     <td class="balance" th:text="${#numbers.formatDecimal(account.getBalance(), 1, 2)}"></td>
                     <td class="animalType" th:text="${account.getAnimalType()}"></td>
+                    <td class="crown"><img th:src="${account.isKing()}? 'img/crown.png' : _"></td>
+                    <td class="goodGuy" th:text="${account.isGoodGuy()}? 'Good guy' : 'Bad guy'"></td>
+                    <td>
+                        <form class="addMoney" method="POST" action="/addMoney">
+                            <button type="submit" name="index" th:value="${accountStat.index}">$Zebras++$</button>
+                        </form>
+                    </td>
                 </tr>
             </tbody>
         </table>

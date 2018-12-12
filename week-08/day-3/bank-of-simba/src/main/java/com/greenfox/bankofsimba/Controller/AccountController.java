@@ -6,6 +6,7 @@ import com.greenfox.bankofsimba.Model.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,12 @@ public class AccountController {
   public String showAllAccounts(Model model){
     model.addAttribute("accounts", bank.getBankAccounts());
     return "show";
+  }
+
+  @PostMapping("/addMoney")
+  public String addMoney(String index) {
+    bank.addMoney(Integer.parseInt(index));
+    return "redirect:/";
   }
 
   @GetMapping("/show")

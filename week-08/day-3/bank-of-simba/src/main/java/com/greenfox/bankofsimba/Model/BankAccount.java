@@ -28,4 +28,8 @@ public class BankAccount {
   public boolean isGoodGuy() {
     return owner.isAgoodGuy();
   }
+
+  public void addMoney() {
+    this.balance += this.isKing()? 100 : 10;
+  }
 }

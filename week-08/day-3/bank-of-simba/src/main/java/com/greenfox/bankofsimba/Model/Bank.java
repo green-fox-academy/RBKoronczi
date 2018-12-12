@@ -18,6 +18,10 @@ public class Bank {
     bank.add(account);
   }
 
+  public void addMoney(int index){
+    bank.get(index).addMoney();
+  }
+
   private void fillBank() {
     Animal simba = new Animal("Simba", "lion", true, true);
     Animal nala = new Animal("Nala", "lion", false, true);
