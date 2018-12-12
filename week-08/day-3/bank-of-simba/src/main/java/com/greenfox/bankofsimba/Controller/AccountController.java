@@ -28,7 +28,6 @@ public class AccountController {
 
   @PostMapping("/addAccount")
   public String addAccount(String name, int balance, String type, boolean isKing, boolean isGoodGuy) {
-    System.err.println(type);
     Animal animal = new Animal(name, type, isKing, isGoodGuy);
     BankAccount account = new BankAccount(animal, balance);
     bank.addAccount(account);
