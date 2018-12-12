@@ -32,6 +32,27 @@
                         </form>
                     </td>
                 </tr>
+                <tr class="addAccounts">
+                    <form class="addAccountForm" method="POST" action="/addAccount">
+                        <td></td>
+                        <td>
+                            <input name="name" type="text" placeholder="name">
+                        </td>
+                        <td class="balance">
+                            <input name="balance" type="number" placeholder="0">
+                        </td>
+                        <td>
+                            <input name="animalType" type="text" placeholder="type">
+                        </td>
+                        <td>
+                            <input name="isKing" type="checkbox">
+                        </td>
+                        <td>
+                            <input name="isGoodGuy" type="checkbox">
+                        </td>
+                        <td><button type="submit">Submit</button></td>
+                    </form>
+                </tr>
             </tbody>
         </table>
     </div>

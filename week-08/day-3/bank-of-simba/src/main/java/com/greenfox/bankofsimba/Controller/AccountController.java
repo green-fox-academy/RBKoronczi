@@ -26,6 +26,14 @@ public class AccountController {
     return "redirect:/";
   }
 
+  @PostMapping("/addAccount")
+  public String addAccount(String name, int balance, String type, boolean isKing, boolean isGoodGuy) {
+    Animal animal = new Animal(name, type, isKing, isGoodGuy);
+    BankAccount account = new BankAccount(animal, balance);
+    bank.addAccount(account);
+    return "redirect:/";
+  }
+
   @GetMapping("/show")
   public String showBankAccount(Model model) {
     BankAccount example = new BankAccount(new Animal("Simba", "lion", false, true), 2000);
