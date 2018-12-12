@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="common_header(title)">
+<head th:fragment="common_header">
     <meta charset="UTF-8">
-    <title th:replace="${title}">Bank OF Simba</title>
+    <title>Bank OF Simba</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -12,15 +12,17 @@
     <header th:fragment="header">
         <nav>
             <a href="/">Home</a>
+            <a href="/show">Show</a>
+            <a href="/htmlception">Ception</a>
         </nav>
     </header>
 
     <div class="content">
         <p>Nothing to see here, move along</p>
     </div>
-    
+
     <footer th:fragment="footer">
-        <p>National Bank Of Sigma</p>
+        <p>&copy; Bank Of Simba</p>
     </footer>
 </div>
 </body>

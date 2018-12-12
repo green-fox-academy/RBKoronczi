@@ -30,3 +30,19 @@ nav > a {
     padding: 1em;
     margin: 0 10px;
 }
+
+table {
+    width: 90%;
+    margin: 2em auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 1rem;
+    text-align: left;
+    border: 2px #515151 solid;
+}
+
+.balance::after {
+    content:'.00 Zebras';
+}

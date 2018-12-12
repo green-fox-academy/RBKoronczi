@@ -1,18 +1,16 @@
 package com.greenfox.bankofsimba.Model;
 
 public class BankAccount {
-  private String name;
-  private double balance;
-  private String animalType;
+  private Animal owner;
+  private int balance;
 
-  public BankAccount(String name, double balance, String animalType) {
-    this.name = name;
+  public BankAccount(Animal owner, int balance) {
+    this.owner = owner;
     this.balance = balance;
-    this.animalType = animalType;
   }
 
   public String getName() {
-    return name;
+    return owner.getName();
   }
 
   public double getBalance() {
@@ -20,6 +18,14 @@ public class BankAccount {
   }
 
   public String getAnimalType() {
-    return animalType;
+    return owner.getType();
+  }
+
+  public boolean isKing() {
+    return owner.isKing();
+  }
+
+  public boolean isGoodGuy() {
+    return owner.isAgoodGuy();
   }
 }

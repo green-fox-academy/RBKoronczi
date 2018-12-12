@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main">
+    <header th:replace="base :: header"></header>
+    <div class="content">
+        <table>
+            <thead>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Animal Type</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="name" th:text="${name}"></td>
+                    <td class="balance" th:text="${balance}"></td>
+                    <td class="animalType" th:text="${animalType}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer th:replace="base :: footer"></footer>
+</div>
+</body>
+</html>
