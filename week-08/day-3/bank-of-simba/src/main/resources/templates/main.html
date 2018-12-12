@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common_header(title)">
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Bank OF Simba</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+<div class="main">
+    <header th:fragment="header">
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <p>Nothing to see here, move along</p>
+    </div>
+    
+    <footer th:fragment="footer">
+        <p>National Bank Of Sigma</p>
+    </footer>
+</div>
+</body>
+</html>

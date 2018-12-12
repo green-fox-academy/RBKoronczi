@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #EBEBEB;
+    color: #515151
+}
+
+.main {
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    padding: 5%;
+}
+
+#headerLink {
+    text-decoration: none;
+    color: #515151;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > a {
+    background-color: #515151;
+    text-decoration: none;
+    color: white;
+    font-size: 14pt;
+    border-radius: 1.5em;
+    padding: 1em;
+    margin: 0 10px;
+}
