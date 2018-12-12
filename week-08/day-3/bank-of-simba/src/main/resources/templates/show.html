@@ -15,10 +15,10 @@
             <th>Animal Type</th>
             </thead>
             <tbody>
-                <tr>
-                    <td class="name" th:text="${name}"></td>
-                    <td class="balance" th:text="${balance}"></td>
-                    <td class="animalType" th:text="${animalType}"></td>
+                <tr th:each="account : ${accounts}">
+                    <td class="name" th:text="${account.getName()}"></td>
+                    <td class="balance" th:text="${#numbers.formatDecimal(account.getBalance(), 1, 2)}"></td>
+                    <td class="animalType" th:text="${account.getAnimalType()}"></td>
                 </tr>
             </tbody>
         </table>

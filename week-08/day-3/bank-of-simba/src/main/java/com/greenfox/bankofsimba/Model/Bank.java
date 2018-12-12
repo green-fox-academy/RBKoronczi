@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Bank {
   private ArrayList<BankAccount> bank;
 
-  Bank() {
+  public Bank() {
     bank = new ArrayList<>();
     fillBank();
   }
 
-  public ArrayList<BankAccount> getBank() {
+  public ArrayList<BankAccount> getBankAccounts() {
     return bank;
   }
 

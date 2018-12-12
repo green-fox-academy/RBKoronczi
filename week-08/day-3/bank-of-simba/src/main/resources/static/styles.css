@@ -44,5 +44,5 @@ td, th {
 }
 
 .balance::after {
-    content:'.00 Zebras';
+    content:' Zebras';
 }
