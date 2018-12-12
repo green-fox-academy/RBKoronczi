@@ -10,12 +10,14 @@
     <div class="content">
         <table>
             <thead>
+            <th>Index</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Animal Type</th>
             </thead>
             <tbody>
                 <tr th:each="account : ${accounts}">
+                    <td class="tableIndex" th:text="${accountStat.index}"></td>
                     <td class="name" th:text="${account.getName()}"></td>
                     <td class="balance" th:text="${#numbers.formatDecimal(account.getBalance(), 1, 2)}"></td>
                     <td class="animalType" th:text="${account.getAnimalType()}"></td>
