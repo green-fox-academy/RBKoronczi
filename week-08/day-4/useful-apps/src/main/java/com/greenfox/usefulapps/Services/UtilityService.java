@@ -23,4 +23,12 @@ public class UtilityService {
   public String randomColor() {
     return colors.get(random.nextInt(colors.size()));
   }
+
+  public boolean emailValidator(String address) {
+    if(address.contains("@") && address.indexOf("@") == address.lastIndexOf("@")) {
+      int index = address.indexOf("@");
+      return address.substring(index).contains(".");
+    }
+    return false;
+  }
 }
