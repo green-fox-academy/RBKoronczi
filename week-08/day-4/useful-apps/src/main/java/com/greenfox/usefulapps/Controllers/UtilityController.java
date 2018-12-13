@@ -18,12 +18,12 @@ public class UtilityController {
 
   @GetMapping("/")
   public String index() {
-    return "redirect:/useful";
+    return "index";
   }
 
   @GetMapping("/useful")
   public String usefulUtilities() {
-    return "index";
+    return "useful";
   }
 
   @GetMapping("/useful/colored")
