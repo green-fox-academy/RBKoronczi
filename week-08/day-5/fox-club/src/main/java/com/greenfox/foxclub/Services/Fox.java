@@ -36,4 +36,16 @@ public class Fox {
   public List<String> getTricks() {
     return tricks;
   }
+
+  public void setFood(String food) {
+    this.food = food;
+  }
+
+  public void setDrink(String drink) {
+    this.drink = drink;
+  }
+
+  public void addTrick(String trick) {
+    tricks.add(trick);
+  }
 }

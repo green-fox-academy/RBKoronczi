@@ -22,7 +22,7 @@ public class MainController {
   @GetMapping("/")
   public String main(@RequestParam(value = "name", required = false) String name, Model model) {
     if (name != null && den.containsName(name)) {
-      addFox(model, den.getFoxWithName(name));
+      showFox(model, den.getFoxWithName(name));
       return "index";
     } else {
       return "redirect:/login";
@@ -43,7 +43,13 @@ public class MainController {
     return "redirect:/?name=" + name;
   }
 
-  private void addFox(Model model, Fox fox) {
+  @GetMapping("/nutrition")
+  public String showNutritionStore(@RequestParam("name") String name, Model model) {
+    showFox(model, den.getFoxWithName(name));
+    return "nutrition";
+  }
+
+  private void showFox(Model model, Fox fox) {
     model.addAttribute("name", fox.getName());
     model.addAttribute("food", fox.getFood());
     model.addAttribute("drink", fox.getDrink());

@@ -5,7 +5,11 @@
     <title>Fox Club</title>
 </head>
 <header th:fragment="header(name)">
-    <a th:href="'/?name=' + ${name}">Information</a>
+    <h1 th:text="'Welcome back '+${name}+'!'"></h1>
+    <nav>
+        <a th:href="'/?name='+${name}">Information</a>
+        <a th:href="'/nutrition/?name='+${name}">Nutrition Store</a>
+    </nav>
 </header>
 <body>
 </body>
