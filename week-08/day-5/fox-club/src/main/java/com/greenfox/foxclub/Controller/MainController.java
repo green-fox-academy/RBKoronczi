@@ -12,21 +12,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
-   private FoxDen den;
+  private FoxDen den;
 
-   @Autowired
-   MainController(FoxDen den) {
-     this.den = den;
-   }
+  @Autowired
+  MainController(FoxDen den) {
+    this.den = den;
+  }
 
   @GetMapping("/")
-  public String main(@RequestParam ("name") String name, Model model) {
-    if(name != null && den.containsName(name)) {
-      Fox fox = den.getFoxWithName(name);
-      model.addAttribute("name", fox.getName());
-      model.addAttribute("food", fox.getFood());
-      model.addAttribute("drink", fox.getDrink());
-      model.addAttribute("tricks", fox.getTricks());
+  public String main(@RequestParam(value = "name", required = false) String name, Model model) {
+    if (name != null && den.containsName(name)) {
+      addFox(model, den.getFoxWithName(name));
       return "index";
     } else {
       return "redirect:/login";
@@ -45,5 +41,12 @@ public class MainController {
       den.addFox(fox);
     }
     return "redirect:/?name=" + name;
+  }
+
+  private void addFox(Model model, Fox fox) {
+    model.addAttribute("name", fox.getName());
+    model.addAttribute("food", fox.getFood());
+    model.addAttribute("drink", fox.getDrink());
+    model.addAttribute("tricks", fox.getTricks());
   }
 }

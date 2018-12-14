@@ -11,7 +11,7 @@ public class Fox {
 
   public Fox(String name) {
     this.name = name;
-    if(this.name.equalsIgnoreCase("Mr. Green")) {
+    if (this.name.equalsIgnoreCase("Mr. Green")) {
       this.food = "salad";
       this.drink = "water";
     } else {
