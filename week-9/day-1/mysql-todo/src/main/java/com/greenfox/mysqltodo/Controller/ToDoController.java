@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,5 +26,16 @@ public class ToDoController {
         : service.listAll()
     );
     return "todolist";
+  }
+
+  @GetMapping("/create")
+  public String create() {
+    return "create";
+  }
+
+  @PostMapping("/create")
+  public String create(String name) {
+    service.addTodo(name);
+    return "redirect:/todo/list";
   }
 }

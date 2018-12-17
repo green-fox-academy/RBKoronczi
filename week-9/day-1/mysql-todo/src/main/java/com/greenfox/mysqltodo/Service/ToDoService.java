@@ -27,4 +27,9 @@ public class ToDoService {
   public List<ToDo> listActive() {
     return listAll().stream().filter(toDo -> !toDo.isDone()).collect(Collectors.toList());
   }
+
+  public void addTodo(String action) {
+    ToDo toDo = new ToDo(action, false);
+    repository.save(toDo);
+  }
 }
