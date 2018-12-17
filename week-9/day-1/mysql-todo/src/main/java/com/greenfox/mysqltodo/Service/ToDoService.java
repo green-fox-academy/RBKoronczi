@@ -32,4 +32,8 @@ public class ToDoService {
     ToDo toDo = new ToDo(action, false);
     repository.save(toDo);
   }
+
+  public void delete(long id) {
+    repository.deleteById(id);
+  }
 }
