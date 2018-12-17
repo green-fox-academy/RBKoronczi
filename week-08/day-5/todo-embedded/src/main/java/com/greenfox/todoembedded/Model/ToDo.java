@@ -1,4 +1,4 @@
-package com.greenfox.todoembedded.Service;
+package com.greenfox.todoembedded.Model;
 
 public class ToDo {
   private long id;
