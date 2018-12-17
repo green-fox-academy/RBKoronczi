@@ -1,5 +1,6 @@
 package com.greenfox.todoembedded.Controller;
 
+import com.greenfox.todoembedded.Model.ToDo;
 import com.greenfox.todoembedded.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,10 +22,9 @@ public class ToDoController {
 
   @GetMapping(value = {"/", "/list"})
   public String list(Model model) {
-    String example = "This is my first Todo";
-    ArrayList todosExample = new ArrayList();
-    todosExample.add(example);
-    model.addAttribute("todos", todosExample);
+    ArrayList<ToDo> listOfTodos = new ArrayList<ToDo>();
+    repository.findAll().forEach(toDo -> listOfTodos.add(toDo));
+    model.addAttribute("todos", listOfTodos);
     return "todolist";
   }
 }

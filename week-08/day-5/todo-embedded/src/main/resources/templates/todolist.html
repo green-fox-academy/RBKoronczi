@@ -10,7 +10,7 @@
 </header>
 <main>
     <ul th:each="todo : ${todos}">
-        <li th:text="${todo}"></li>
+        <li th:text="${todo.getTitle()}"></li>
     </ul>
 </main>
 </body>
