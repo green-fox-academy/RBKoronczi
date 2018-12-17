@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:fragment="head">
     <meta charset="UTF-8">
     <title>ToDo</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../styles.css}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -10,10 +12,10 @@
         <a href="/todo/list">List All Tasks</a>
         <a href="/todo/create">Add ToDo Task</a>
         <a href="/todo/list?isActive=true">Show only active Tasks</a>
-        <h1>ToDos for today:</h1>
     </nav>
 </header>
 <main>
+    <h1>ToDos for today:</h1>
     <table>
         <thead>
         <tr>

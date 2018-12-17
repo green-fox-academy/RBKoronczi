@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Add ToDo</title>
+    <link rel="stylesheet" type="text/css" th:href="@{../../styles.css}">
 </head>
 <body>
+<main>
 <form th:action="@{/todo/{id}/edit(id=${toDo.getId()})}" method="post">
     <h1>ToDo task:</h1>
     <table>
@@ -34,6 +36,6 @@
     <button type="submit">Edit</button>
     <form action="/todo/list"><button type="submit">Cancel</button> </form>
 </form>
-
+</main>
 </body>
 </html>

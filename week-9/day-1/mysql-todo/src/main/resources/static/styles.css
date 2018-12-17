@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #EBEBEB;
+    color: #515151
+}
+
+header {
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    padding: 1em 5%;
+}
+
+nav {
+    display: flex;
+    justify-content: left;
+}
+
+nav > a {
+    background-color: #515151;
+    text-decoration: none;
+    color: white;
+    font-size: 14pt;
+    border-radius: 1.5em;
+    padding: 1em;
+    margin: 0 10px;
+}
+
+main {
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    padding: 1em 5%;
+}
+
+table {
+    width: 90%;
+    margin: 2em auto;
+    border-collapse: collapse;
+}
