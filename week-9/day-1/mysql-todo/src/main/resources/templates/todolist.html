@@ -8,6 +8,7 @@
 <header>
     <nav>
         <a href="/todo/create">Add ToDo</a>
+        <a href="/todo/list?isActive=true">Show only active Tasks</a>
         <h1>ToDos for today:</h1>
     </nav>
 </header>
@@ -20,6 +21,7 @@
             <th>Done</th>
             <th>Urgent</th>
             <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -30,6 +32,9 @@
             <td th:text="${todo.isUrgent()}"></td>
             <td><form action="/todo/delete" method="POST">
                 <button type="submit"  name="id" th:value="${todo.getId()}">DEL</button>
+            </form></td>
+            <td><form th:action="@{/todo/{id}/edit(id=${todo.getId()})}" method="GET">
+                <button type="submit">Edit</button>
             </form></td>
         </tr>
         </tbody>

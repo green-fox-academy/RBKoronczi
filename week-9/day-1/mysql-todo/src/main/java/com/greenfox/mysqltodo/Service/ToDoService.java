@@ -29,11 +29,32 @@ public class ToDoService {
   }
 
   public void addTodo(String action) {
-    ToDo toDo = new ToDo(action, false);
-    repository.save(toDo);
+    repository.save(new ToDo(action, false));
   }
 
   public void delete(long id) {
     repository.deleteById(id);
+  }
+
+  public ToDo getToDoByID(long id) {
+    return repository.findById(id).get();
+  }
+
+  public void updateToDo(long id, String text, Boolean isDone, Boolean isUrgent) {
+    ToDo toDo = repository.findById(id).get();
+    if(text.length() != 0) {
+      toDo.setTitle(text);
+    }
+    if(isDone != null) {
+      toDo.setDone(true);
+    } else {
+      toDo.setDone(false);
+    }
+    if(isUrgent != null) {
+      toDo.setUrgent(true);
+    } else {
+      toDo.setUrgent(false);
+    }
+    repository.save(toDo);
   }
 }

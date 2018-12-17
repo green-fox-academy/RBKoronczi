@@ -38,4 +38,16 @@ public class ToDo {
   public boolean isDone() {
     return isDone;
   }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public void setUrgent(boolean urgent) {
+    isUrgent = urgent;
+  }
+
+  public void setDone(boolean done) {
+    isDone = done;
+  }
 }
