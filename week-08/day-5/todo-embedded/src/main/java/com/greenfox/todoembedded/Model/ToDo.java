@@ -1,6 +1,11 @@
 package com.greenfox.todoembedded.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ToDo {
+  @Id
   private long id;
   private String title;
   private boolean isUrgent;
