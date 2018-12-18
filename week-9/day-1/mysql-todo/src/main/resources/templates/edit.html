@@ -12,17 +12,19 @@
             <h1>ToDo task:</h1>
             Original Text:
             <span th:text="${toDo.getTitle()}"></span>
-            (leave the text be if you want to keep it)
+            <span>(leave the text be if you want to keep it)</span>
             <div class="input-group">
                 <input type="text" class="form-control" name="title" th:placeholder="${toDo.getTitle()}">
                 <div class="input-group-append">
                     <div class="input-group-text">
-                        <input type="checkbox" name="isDone" th:checked="${toDo.isDone()}?'checked'">
+                        <input type="checkbox" name="isDone" th:checked="${toDo.isDone()}?'checked'" id="done">
+                        <label for="done" class="form-check-label">Done</label>
                     </div>
                 </div>
                 <div class="input-group-append">
                     <div class="input-group-text">
-                        <input type="checkbox" name="isUrgent" th:checked="${toDo.isUrgent()}?'checked'">
+                        <input type="checkbox" name="isUrgent" th:checked="${toDo.isUrgent()}?'checked'" id="urgent">
+                        <label for="urgent" class="form-check-label">Urgent</label>
                     </div>
                 </div>
             </div>
