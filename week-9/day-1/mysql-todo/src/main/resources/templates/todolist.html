@@ -47,10 +47,10 @@
                 <i th:text="${todo.isUrgent()}? 'warning'" class="material-icons">></i>
             </td>
             <td>
-                <a th:href="@{/todo/{id}/delete(id=${todo.getId()})}" class="badge badge-info">Delete</a>
+                <a th:href="@{/todo/{id}/delete(id=${todo.getId()})}" class="btn btn-danger">Delete</a>
             </td>
             <td>
-                <a th:href="@{/todo/{id}/edit(id=${todo.getId()})}" class="badge badge-danger">Edit</a>
+                <a th:href="@{/todo/{id}/edit(id=${todo.getId()})}" class="btn btn-primary">Edit</a>
             </td>
         </tr>
         </tbody>
