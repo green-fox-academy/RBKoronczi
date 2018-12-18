@@ -28,8 +28,12 @@ public class ToDoService {
     return listAll().stream().filter(toDo -> !toDo.isDone()).collect(Collectors.toList());
   }
 
-  public void addTodo(String action) {
-    repository.save(new ToDo(action, false));
+  public void addTodo(String action, Boolean urgent) {
+    if(urgent != null) {
+      repository.save(new ToDo(action, true));
+    } else {
+      repository.save(new ToDo(action, false));
+    }
   }
 
   public void delete(long id) {
