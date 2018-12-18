@@ -33,12 +33,8 @@
             <td th:text="${todo.getTitle()}"></td>
             <td th:text="${todo.isDone()}"></td>
             <td th:text="${todo.isUrgent()}"></td>
-            <td><form action="/todo/delete" method="POST">
-                <button type="submit"  name="id" th:value="${todo.getId()}">DEL</button>
-            </form></td>
-            <td><form th:action="@{/todo/{id}/edit(id=${todo.getId()})}" method="GET">
-                <button type="submit">Edit</button>
-            </form></td>
+            <td><a th:href="@{/todo/{id}/delete(id=${todo.getId()})}">Delete</a></td>
+            <td><a th:href="@{/todo/{id}/edit(id=${todo.getId()})}">Edit</a></td>
         </tr>
         </tbody>
     </table>

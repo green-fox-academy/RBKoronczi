@@ -37,8 +37,8 @@ public class ToDoController {
     return "redirect:/todo/list";
   }
 
-  @PostMapping("/delete")
-  public String delete(long id) {
+  @GetMapping("/{id}/delete")
+  public String delete(@PathVariable("id") long id) {
     service.delete(id);
     return "redirect:/todo/list";
   }
