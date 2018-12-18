@@ -44,7 +44,7 @@
                 <i th:text="${todo.isDone()}? 'check_box' : 'check_box_outline_blank'" class="material-icons"></i>
             </td>
             <td>
-                <i th:text="${todo.isUrgent()}? 'warning'" class="material-icons">></i>
+                <i th:text="${todo.isUrgent()}? 'warning'" class="material-icons"></i>
             </td>
             <td>
                 <a th:href="@{/todo/{id}/delete(id=${todo.getId()})}" class="btn btn-danger">Delete</a>
