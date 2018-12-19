@@ -13,11 +13,13 @@ public class ToDo {
   private String title;
   private boolean isUrgent;
   private boolean isDone;
+  private Assignee assignee;
 
-  public ToDo(String title, boolean isUrgent) {
+  public ToDo(String title, boolean isUrgent, Assignee assignee) {
     this.title = title;
     this.isUrgent = isUrgent;
     this.isDone = false;
+    this.assignee = assignee;
   }
 
   public ToDo() {
