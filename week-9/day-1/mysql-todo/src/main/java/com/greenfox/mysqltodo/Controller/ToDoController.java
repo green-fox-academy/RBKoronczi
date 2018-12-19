@@ -31,9 +31,9 @@ public class ToDoController {
     return "create";
   }
 
-  @PostMapping("/create")
-  public String create(String name, Boolean urgent) {
-    service.addTodo(name, urgent);
+  @PostMapping("/create/{id}")
+  public String create(String name, Boolean urgent, @PathVariable("id") long id) {
+    service.addTodo(name, urgent, id);
     return "redirect:/todo/list";
   }
 

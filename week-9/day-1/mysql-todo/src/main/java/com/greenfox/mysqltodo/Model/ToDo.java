@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
 
 @Entity
 public class ToDo {
@@ -14,6 +15,7 @@ public class ToDo {
   private boolean isUrgent;
   private boolean isDone;
   private Assignee assignee;
+  private ArrayList<ToDo> subtasks;
 
   public ToDo(String title, boolean isUrgent, Assignee assignee) {
     this.title = title;

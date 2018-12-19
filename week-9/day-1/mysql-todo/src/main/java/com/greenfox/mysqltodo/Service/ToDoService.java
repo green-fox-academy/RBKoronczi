@@ -12,10 +12,12 @@ import java.util.stream.Collectors;
 @Service
 public class ToDoService {
   private ToDoRepository repository;
+  private AssigneeService assigneeService;
 
   @Autowired
-  ToDoService(ToDoRepository repository) {
+  ToDoService(ToDoRepository repository, AssigneeService assigneeService) {
     this.repository = repository;
+    this.assigneeService = assigneeService;
   }
 
   public List<ToDo> listAll() {
@@ -28,11 +30,11 @@ public class ToDoService {
     return listAll().stream().filter(toDo -> !toDo.isDone()).collect(Collectors.toList());
   }
 
-  public void addTodo(String action, Boolean urgent) {
+  public void addTodo(String action, Boolean urgent, long assigneeId) {
     if(urgent != null) {
-      repository.save(new ToDo(action, true));
+      repository.save(new ToDo(action, true, assigneeService.getAssigneeById(assigneeId)));
     } else {
-      repository.save(new ToDo(action, false));
+      repository.save(new ToDo(action, false, assigneeService.getAssigneeById(assigneeId)));
     }
   }
 
