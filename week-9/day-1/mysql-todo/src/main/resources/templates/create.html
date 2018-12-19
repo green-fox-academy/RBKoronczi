@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Add ToDo</title>
-    <link href="/webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/main::head(~{::title})">
+    <title>Create ToDo</title>
 </head>
 <body>
 <main class="container">
@@ -26,7 +24,6 @@
         </form>
     </div>
 </main>
-<script src="/webjars/jquery/3.3.1-1/jquery.min.js"></script>
-<script src="/webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<footer th:replace="fragments/main::footer"></footer>
 </body>
 </html>

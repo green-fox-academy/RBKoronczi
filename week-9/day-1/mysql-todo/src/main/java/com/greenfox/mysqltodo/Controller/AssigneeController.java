@@ -27,7 +27,7 @@ public class AssigneeController {
   @PostMapping("/add")
   public String add(String name, String email) {
     service.add(name, email);
-    return "redirect:/";
+    return "redirect:/assignee/";
   }
 
   @GetMapping("/{id}/edit")
@@ -39,12 +39,12 @@ public class AssigneeController {
   @PostMapping("/{id}/edit")
   public String editAssignee(@PathVariable("id") long id, String newName) {
     service.editName(id, newName);
-    return "redirect:/";
+    return "redirect:/assignee/";
   }
 
   @PostMapping("/{id}/delete")
   public String deleteAssignee(@PathVariable("id") long id) {
     service.remove(id);
-    return "redirect:/";
+    return "redirect:/assignee/";
   }
 }

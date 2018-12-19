@@ -55,9 +55,12 @@ public class ToDoController {
   }
 
   @GetMapping("/search")
-  public String search(@RequestParam("keyword") String keyword, Model model) {
-    model.addAttribute("todos", service.search(keyword));
-    return "todolist";
+  public String search(@RequestParam(value = "keyword", required = false) String keyword, Model model) {
+    if(keyword != null) {
+      model.addAttribute("todos", service.search(keyword));
+      return "todolist";
+    }
+    return "redirect:/todo/";
   }
 
   @GetMapping("/{assigneeId}/search")
