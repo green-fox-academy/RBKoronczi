@@ -1,6 +1,5 @@
 package com.greenfox.mysqltodo.Controller;
 
-import com.greenfox.mysqltodo.Model.ToDo;
 import com.greenfox.mysqltodo.Service.ToDoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,8 +31,8 @@ public class ToDoController {
   }
 
   @PostMapping("/create/{id}")
-  public String create(String name, Boolean urgent, @PathVariable("id") long id) {
-    service.addTodo(name, urgent, id);
+  public String create(String name, String description, Boolean urgent, @PathVariable("id") long id) {
+    service.addTodo(name, description, urgent, id);
     return "redirect:/todo/list";
   }
 
@@ -54,4 +53,17 @@ public class ToDoController {
     service.updateToDo(id, title, isDone, isUrgent);
     return "redirect:/todo/list";
   }
+
+  @GetMapping("/search")
+  public String search(@RequestParam("keyword") String keyword, Model model) {
+    model.addAttribute("todos", service.search(keyword));
+    return "todolist";
+  }
+
+  @GetMapping("/{assigneeId}/search")
+  public String searchByAssignee(@PathVariable("assigneeId") long assigneeId, Model model) {
+    model.addAttribute("todos", service.searchByAssigneeId(assigneeId));
+    return "todolist";
+  }
+
 }

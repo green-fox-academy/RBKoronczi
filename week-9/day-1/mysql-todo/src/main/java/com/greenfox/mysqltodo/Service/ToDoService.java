@@ -21,21 +21,17 @@ public class ToDoService {
   }
 
   public List<ToDo> listAll() {
-    ArrayList<ToDo> listOfTodos = new ArrayList<ToDo>();
-    repository.findAll().forEach(toDo -> listOfTodos.add(toDo));
-    return listOfTodos;
+    ArrayList<ToDo> result = new ArrayList<ToDo>();
+    repository.findAll().forEach(toDo -> result.add(toDo));
+    return result;
   }
 
   public List<ToDo> listActive() {
     return listAll().stream().filter(toDo -> !toDo.isDone()).collect(Collectors.toList());
   }
 
-  public void addTodo(String action, Boolean urgent, long assigneeId) {
-    if(urgent != null) {
-      repository.save(new ToDo(action, true, assigneeService.getAssigneeById(assigneeId)));
-    } else {
-      repository.save(new ToDo(action, false, assigneeService.getAssigneeById(assigneeId)));
-    }
+  public void addTodo(String title, String description, Boolean urgent, long assigneeId) {
+      repository.save(new ToDo(title, description, urgent? true : false, assigneeService.getAssigneeById(assigneeId)));
   }
 
   public void delete(long id) {
@@ -62,5 +58,19 @@ public class ToDoService {
       toDo.setUrgent(false);
     }
     repository.save(toDo);
+  }
+
+  public List<ToDo> search(String keyword) {
+    return listAll()
+        .stream()
+        .filter(toDo -> toDo.getTitle().contains(keyword) || toDo.getDescription().contains(keyword))
+        .collect(Collectors.toList());
+  }
+
+  public List<ToDo> searchByAssigneeId(long assigneeId) {
+    return listAll()
+        .stream()
+        .filter(toDo -> toDo.getAssignee().equals(assigneeService.getAssigneeById(assigneeId)))
+        .collect(Collectors.toList());
   }
 }
