@@ -31,7 +31,7 @@ public class ToDoService {
   }
 
   public void addTodo(String title, String description, Boolean urgent, long assigneeId) {
-      repository.save(new ToDo(title, description, urgent? true : false, assigneeService.getAssigneeById(assigneeId)));
+    repository.save(new ToDo(title, description, urgent ? true : false, assigneeService.getAssigneeById(assigneeId)));
   }
 
   public void delete(long id) {
@@ -44,15 +44,15 @@ public class ToDoService {
 
   public void updateToDo(long id, String text, Boolean isDone, Boolean isUrgent) {
     ToDo toDo = repository.findById(id).get();
-    if(text.length() != 0) {
+    if (text.length() != 0) {
       toDo.setTitle(text);
     }
-    if(isDone != null) {
+    if (isDone != null) {
       toDo.setDone(true);
     } else {
       toDo.setDone(false);
     }
-    if(isUrgent != null) {
+    if (isUrgent != null) {
       toDo.setUrgent(true);
     } else {
       toDo.setUrgent(false);
@@ -60,11 +60,18 @@ public class ToDoService {
     repository.save(toDo);
   }
 
-  public List<ToDo> search(String keyword) {
-    return listAll()
-        .stream()
-        .filter(toDo -> toDo.getTitle().contains(keyword) || toDo.getDescription().contains(keyword))
-        .collect(Collectors.toList());
+  public List<ToDo> search(String input) {
+    if (input != null || input.length() != 0) {
+      String keyword = input.toLowerCase();
+      return listAll()
+          .stream()
+          .filter(toDo ->
+              toDo.getTitle().toLowerCase().contains(keyword)
+                  || (toDo.getDescription() != null && toDo.getDescription().contains(keyword))
+          )
+          .collect(Collectors.toList());
+    }
+    return listAll();
   }
 
   public List<ToDo> searchByAssigneeId(long assigneeId) {

@@ -44,7 +44,7 @@ public class ToDoController {
 
   @GetMapping("/{id}/edit")
   public String showEditPage(Model model, @PathVariable("id") long id) {
-    model.addAttribute("toDo" ,service.getToDoByID(id));
+    model.addAttribute("toDo", service.getToDoByID(id));
     return "edit";
   }
 
@@ -56,11 +56,9 @@ public class ToDoController {
 
   @GetMapping("/search")
   public String search(@RequestParam(value = "keyword", required = false) String keyword, Model model) {
-    if(keyword != null) {
-      model.addAttribute("todos", service.search(keyword));
-      return "todolist";
-    }
-    return "redirect:/todo/";
+    model.addAttribute("todos", service.search(keyword));
+    return "todolist";
+
   }
 
   @GetMapping("/{assigneeId}/search")
