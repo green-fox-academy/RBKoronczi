@@ -1,9 +1,6 @@
 package com.greenfox.mysqltodo.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
@@ -15,8 +12,11 @@ public class ToDo {
   private String description;
   private boolean isUrgent;
   private boolean isDone;
-  private Assignee assignee;
   private ArrayList<ToDo> subtasks;
+
+  @ManyToOne
+  @JoinColumn(name = "assignee_id")
+  private Assignee assignee;
 
   public ToDo(String title, String description, boolean isUrgent, Assignee assignee) {
     this();

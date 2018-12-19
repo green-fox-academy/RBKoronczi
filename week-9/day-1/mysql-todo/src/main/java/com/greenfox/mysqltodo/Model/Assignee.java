@@ -1,9 +1,8 @@
 package com.greenfox.mysqltodo.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Assignee {
@@ -13,12 +12,17 @@ public class Assignee {
   private String name;
   private String email;
 
+  @OneToMany(mappedBy = "assignee")
+  private List<ToDo> toDos;
+
   public Assignee(String name, String email) {
+    this();
     this.name = name;
     this.email = email;
   }
 
   public Assignee() {
+  toDos = new ArrayList<>();
   }
 
   public long getId() {
