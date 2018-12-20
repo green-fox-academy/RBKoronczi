@@ -35,6 +35,7 @@
                            th:aria-controls="'collapse'+${post.getId()}"
                            th:text="${post.getTitle()}">
                         </a>
+                        <span th:text="'Created: ' + ${post.getCreated()}"></span>
                     </h5>
                 </div>
                 <div th:id="'collapse'+${post.getId()}" class="collapse" role="tabpanel"

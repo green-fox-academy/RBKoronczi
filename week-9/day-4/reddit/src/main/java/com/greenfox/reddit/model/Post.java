@@ -2,11 +2,13 @@ package com.greenfox.reddit.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -20,6 +22,10 @@ public class Post {
 
   @Column(columnDefinition = "TEXT")
   String content;
+
+  @CreationTimestamp
+  @Column(name = "create_date")
+  private Date created;
 
   public Post() {
     this.votes=1;
