@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @Controller
 public class PostController {
   private PostService service;
@@ -21,8 +23,13 @@ public class PostController {
     if(page == null || page < 1) {
       page = 1;
     }
+    ArrayList<Integer> pageNumbers = new ArrayList<>();
+    for(int i = 1; i <= service.getPageCount(); i++) {
+      pageNumbers.add(i);
+    }
+    model.addAttribute("currentPage", page);
+    model.addAttribute("pagination", pageNumbers);
     model.addAttribute("posts", service.getDefaultFrontpage(page - 1));
-    model.addAttribute("pageCount", service.getPageCount());
     return "index";
   }
 

@@ -8,6 +8,25 @@
 <header>
     <nav class="navbar sticky-top navbar-dark bg-primary">
         <a class="navbar-brand" href="/create">Post Something!</a>
+        <ul class="pagination">
+            <li th:class="*{currentPage == 1}?'page-item disabled' :'page-item'">
+                <a class="page-link" th:href="'/?page=' + *{currentPage - 1}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <th:block th:each="pageNumber : ${pagination}">
+                <li th:class="*{pageNumber == currentPage} ? 'page-item active' : 'page-item'">
+                    <a class="page-link" th:href="'/?page=' +${pageNumber}" th:text="${pageNumber}">1</a>
+                </li>
+            </th:block>
+            <li class="page-item">
+                <a class="page-link" th:href="'/?page=' + *{currentPage + 1}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
     </nav>
 </header>
 <main>
