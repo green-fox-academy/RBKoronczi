@@ -3,6 +3,7 @@ package com.greenfox.reddit.model;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,8 +16,10 @@ public class Post {
   @GeneratedValue
   long id;
   String title;
-  String content;
   int votes;
+
+  @Column(columnDefinition = "TEXT")
+  String content;
 
   public Post() {
     this.votes=1;
