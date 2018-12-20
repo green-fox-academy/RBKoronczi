@@ -6,10 +6,29 @@
 </head>
 <body>
 <header>
-
+    <nav class="navbar fixed-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="/create">Post Something!</a>
+    </nav>
 </header>
 <main>
-
+    <div class="container">
+        <div class="row" th:each="post : ${posts}">
+            <div class="col-2" th:text="post.votes">
+            </div>
+            <div class="col-1">
+                <form th:action="@{/{id}/upVote(id=${post.id})}">
+                    <button type="submit"><i class="material-icons">add_circle</i></button>
+                </form>
+            </div>
+            <div class="col-1">
+                <form th:action="@{/{id}/downVote(id=${post.id})}">
+                    <button type="submit"><i class="material-icons">remove_circle</i></button>
+                </form>
+            </div>
+            <div class="col-8" th:text="post.title">
+            </div>
+        </div>
+    </div>
 </main>
 <footer th:replace="fragments/base::footer">
 </footer>
