@@ -6,26 +6,30 @@
 </head>
 <body>
 <header>
-    <nav class="navbar fixed-top navbar-dark bg-primary">
+    <nav class="navbar sticky-top navbar-dark bg-primary">
         <a class="navbar-brand" href="/create">Post Something!</a>
     </nav>
 </header>
 <main>
     <div class="container">
         <div class="row" th:each="post : ${posts}">
-            <div class="col-2" th:text="${post.getVotes()}">
+            <div class="col-1" th:text="${post.getVotes()}">
             </div>
-            <div class="col-1">
-                <form th:action="@{/{id}/upVote(id=${post.getId()})}">
-                    <button type="submit"><i class="material-icons">add_circle</i></button>
-                </form>
+            <div class="col-2">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <form th:action="@{/{id}/upVote(id=${post.getId()})}" method="post">
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="material-icons">add_circle</i>
+                        </button>
+                    </form>
+                    <form th:action="@{/{id}/downVote(id=${post.getId()})}" method="post">
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="material-icons">remove_circle</i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="col-1">
-                <form th:action="@{/{id}/downVote(id=${post.getId()})}">
-                    <button type="submit"><i class="material-icons">remove_circle</i></button>
-                </form>
-            </div>
-            <div class="col-8" th:text="${post.getTitle()}">
+            <div class="col-9" th:text="${post.getTitle()}">
             </div>
         </div>
     </div>

@@ -32,7 +32,6 @@ public class PostController {
 
   @PostMapping("/create")
   public String create(Post post) {
-    System.err.println(post.getTitle() + " created");
     service.AddPost(post);
     return "redirect:/";
   }
