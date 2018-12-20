@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class PostService {
   private PostRepository repository;
+  private int pageSize = 10;
 
   @Autowired
   public PostService(PostRepository repository) {
@@ -38,6 +39,12 @@ public class PostService {
   }
 
   public List<Post> getDefaultFrontpage(int page) {
-    return repository.findAll(PageRequest.of(page, 10)).getContent();
+    return repository.findAll(PageRequest.of(page, pageSize)).getContent();
+  }
+
+  public int getPageCount() {
+    return listAll().size()%pageSize != 0
+        ? listAll().size()/pageSize + 1
+        : listAll().size()/pageSize;
   }
 }

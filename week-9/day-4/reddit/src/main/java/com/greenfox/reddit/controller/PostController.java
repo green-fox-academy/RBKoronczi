@@ -17,8 +17,12 @@ public class PostController {
   }
 
   @GetMapping("/")
-  public String listAll(Model model, @RequestParam(value="page", required = false) int page) {
-    model.addAttribute("posts", service.getDefaultFrontpage(page));
+  public String listAll(Model model, @RequestParam(value="page", required = false) Integer page) {
+    if(page == null || page < 1) {
+      page = 1;
+    }
+    model.addAttribute("posts", service.getDefaultFrontpage(page - 1));
+    model.addAttribute("pageCount", service.getPageCount());
     return "index";
   }
 
