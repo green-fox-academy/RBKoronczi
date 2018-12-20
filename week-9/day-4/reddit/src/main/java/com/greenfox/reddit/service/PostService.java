@@ -4,6 +4,7 @@ import com.greenfox.reddit.model.Post;
 import com.greenfox.reddit.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,7 +40,7 @@ public class PostService {
   }
 
   public List<Post> getDefaultFrontpage(int page) {
-    return repository.findAll(PageRequest.of(page, pageSize)).getContent();
+    return repository.findAll(PageRequest.of(page, pageSize, Sort.by("votes").descending())).getContent();
   }
 
   public int getPageCount() {
