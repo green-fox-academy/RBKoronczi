@@ -3,6 +3,7 @@ package com.greenfox.reddit.service;
 import com.greenfox.reddit.model.Post;
 import com.greenfox.reddit.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -34,5 +35,9 @@ public class PostService {
     Post post = repository.getOne(id);
     post.downVote();
     repository.save(post);
+  }
+
+  public List<Post> getDefaultFrontpage(int page) {
+    return repository.findAll(PageRequest.of(page, 10)).getContent();
   }
 }
