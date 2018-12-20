@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/base::head">
+<head th:replace="fragments/base::head(~{::title})">
     <meta charset="UTF-8">
     <title>TipTop Reddit</title>
 </head>
@@ -13,19 +13,19 @@
 <main>
     <div class="container">
         <div class="row" th:each="post : ${posts}">
-            <div class="col-2" th:text="post.votes">
+            <div class="col-2" th:text="${post.getVotes()}">
             </div>
             <div class="col-1">
-                <form th:action="@{/{id}/upVote(id=${post.id})}">
+                <form th:action="@{/{id}/upVote(id=${post.getId()})}">
                     <button type="submit"><i class="material-icons">add_circle</i></button>
                 </form>
             </div>
             <div class="col-1">
-                <form th:action="@{/{id}/downVote(id=${post.id})}">
+                <form th:action="@{/{id}/downVote(id=${post.getId()})}">
                     <button type="submit"><i class="material-icons">remove_circle</i></button>
                 </form>
             </div>
-            <div class="col-8" th:text="post.title">
+            <div class="col-8" th:text="${post.getTitle()}">
             </div>
         </div>
     </div>

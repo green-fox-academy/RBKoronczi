@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/base::head">
+<head th:replace="fragments/base::head(~{::title})">
     <meta charset="UTF-8">
     <title>Post Something!</title>
 </head>
 <body>
 <main class="container">
     <div class="jumbotron">
-        <form th:action="@{/create}" method="post" th:object="post">
+        <form th:action="@{/create}" method="post" th:object="${post}">
             <div class="form-group row">
                 <label for="Title" class="col-sm-2 col-form-label">Title</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="title" placeholder="Email"
+                    <input type="text" class="form-control" id="title"
                            name="title" th:field="*{title}">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="Title" class="col-sm-2 col-form-label">Title</label>
+                <label for="Title" class="col-sm-2 col-form-label">Content</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="content" placeholder="Email"
+                    <input type="text" class="form-control" id="content"
                            name="title" th:field="*{content}">
                 </div>
             </div>
