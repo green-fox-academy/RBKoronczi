@@ -16,4 +16,23 @@ public class Post {
   long id;
   String title;
   String content;
+  int votes;
+
+  public Post() {
+    this.votes=1;
+  }
+
+  public Post(String title, String content) {
+    this();
+    this.title = title;
+    this.content = content;
+  }
+
+  public void upVote() {
+    this.votes++;
+  }
+
+  public void downVote() {
+    this.votes--;
+  }
 }
