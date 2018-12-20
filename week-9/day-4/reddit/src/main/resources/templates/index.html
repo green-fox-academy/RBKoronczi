@@ -37,13 +37,13 @@
                         </a>
                     </h5>
                 </div>
-                <div th:id="'collapse'+${post.getId()}" class="collapse" role="tabpanel" th:aria-labelledby="'heading'+${post.getId()}">
+                <div th:id="'collapse'+${post.getId()}" class="collapse" role="tabpanel"
+                     th:aria-labelledby="'heading'+${post.getId()}">
                     <div class="card-body" th:utext="${post.getContent()}">
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </main>
 <footer th:replace="fragments/base::footer">
