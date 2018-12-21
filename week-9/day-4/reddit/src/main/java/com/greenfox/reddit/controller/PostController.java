@@ -55,4 +55,9 @@ public class PostController {
     service.downVote(id);
     return "redirect:/";
   }
+
+  @GetMapping("/login")
+  public String loginPage() {
+    return "login";
+  }
 }

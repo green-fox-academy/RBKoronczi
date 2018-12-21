@@ -7,9 +7,11 @@
 <body>
 <header>
     <nav class="navbar sticky-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="/login">Log Test</a>
         <a class="navbar-brand" href="/create">Post Something! <i class="material-icons">
             add_circle_outline
-        </i></a>
+        </i>
+        </a>
         <ul class="pagination">
             <li th:class="*{currentPage == 1}?'page-item disabled' :'page-item'">
                 <a class="page-link" th:href="'/?page=' + *{currentPage - 1}" aria-label="Previous">
