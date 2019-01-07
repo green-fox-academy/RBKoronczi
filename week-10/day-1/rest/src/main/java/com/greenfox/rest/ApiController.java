@@ -43,8 +43,8 @@ public class ApiController {
 
   @PostMapping("/dountil/{action}")
   public Object doUntil(@PathVariable("action") String action, @RequestBody Until until) {
-    if(until.until != 0) {
-      if(action.equals("sum")) {
+    if (until.until != 0) {
+      if (action.equals("sum")) {
         return new Result(until.sumUntil());
       } else if (action.equals("factor")) {
         return new Result(until.factorUntil());
@@ -53,5 +53,19 @@ public class ApiController {
       }
     }
     return new ErrorMessage("Please provide a number!");
+  }
+
+  @PostMapping("/arrays")
+  public Object arrays(@RequestBody ArrayObject array) {
+    if (array.numbers != null && array.what != null) {
+      if (array.what.equals("sum")) {
+        return new Result(array.sum());
+      } else if (array.what.equals("multiply")) {
+        return new Result(array.multiply());
+      } else if (array.what.equals("double")) {
+        return new Result(array.doubling());
+      }
+    }
+    return new ErrorMessage("Please provide what to do with the numbers!");
   }
 }

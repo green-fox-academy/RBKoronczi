@@ -1,9 +1,9 @@
 package com.greenfox.rest.Model;
 
 public class Result {
-  public int result;
+  public Object result;
 
-  public Result(int result) {
+  public Result(Object result) {
     this.result = result;
   }
 }
