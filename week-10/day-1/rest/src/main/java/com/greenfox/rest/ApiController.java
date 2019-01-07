@@ -43,7 +43,6 @@ public class ApiController {
 
   @PostMapping("/dountil/{action}")
   public Object doUntil(@PathVariable("action") String action, @RequestBody Until until) {
-    System.err.println(action + " until " + until.until);
     if(until.until != 0) {
       if(action.equals("sum")) {
         return new Result(until.sumUntil());
