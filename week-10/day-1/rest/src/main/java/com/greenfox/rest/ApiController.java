@@ -1,13 +1,7 @@
 package com.greenfox.rest;
 
-import com.greenfox.rest.Model.AppendAString;
-import com.greenfox.rest.Model.Doubling;
-import com.greenfox.rest.Model.ErrorMessage;
-import com.greenfox.rest.Model.Greeter;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.greenfox.rest.Model.*;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ApiController {
@@ -46,5 +40,19 @@ public class ApiController {
   public Object appendA(@PathVariable("appendable") String appendable) {
     return new AppendAString(appendable);
   }
-}
 
+  @PostMapping("/dountil/{action}")
+  public Object doUntil(@PathVariable("action") String action, @RequestBody Until until) {
+    System.err.println(action + " until " + until.until);
+    if(until.until != 0) {
+      if(action.equals("sum")) {
+        return new Result(until.sumUntil());
+      } else if (action.equals("factor")) {
+        return new Result(until.factorUntil());
+      } else {
+        return new ErrorMessage("Unknown Action");
+      }
+    }
+    return new ErrorMessage("Please provide a number!");
+  }
+}
