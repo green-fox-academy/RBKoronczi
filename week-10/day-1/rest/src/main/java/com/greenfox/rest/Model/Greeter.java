@@ -1,4 +1,4 @@
-package com.greenfox.rest;
+package com.greenfox.rest.Model;
 
 public class Greeter {
   private String welcome_message;
