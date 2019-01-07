@@ -58,18 +58,19 @@ public class ApiController {
   }
 
   @PostMapping("/dountil/{action}")
-  public Object doUntil(@PathVariable("action") String action, @RequestBody Until until) {
-    logService.log("/dountil/" + action, "until=" + until.until);
-    if (until.until != 0) {
-      if (action.equals("sum")) {
-        return new Result(until.sumUntil());
-      } else if (action.equals("factor")) {
-        return new Result(until.factorUntil());
-      } else {
-        return new ErrorMessage("Unknown Action");
-      }
+  public Object doUntil(@PathVariable("action") String action, @RequestBody(required = false) Until until) {
+    if(until == null) {
+      logService.log("/dountil/" + action, "until=null");
+      return new ErrorMessage("Please provide a number!");
     }
-    return new ErrorMessage("Please provide a number!");
+    logService.log("/dountil/" + action, "until=" + until.until);
+    if (action.equals("sum")) {
+      return new Result(until.sumUntil());
+    } else if (action.equals("factor")) {
+      return new Result(until.factorUntil());
+    } else {
+      return new ErrorMessage("Unknown Action");
+    }
   }
 
   @PostMapping("/arrays")
@@ -88,7 +89,7 @@ public class ApiController {
   }
 
   @GetMapping("/log")
-  public List<LogEntry> getLog(){
+  public List<LogEntry> getLog() {
     logService.log("/log", "");
     return logService.findAll();
   }
