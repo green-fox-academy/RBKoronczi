@@ -1,16 +1,30 @@
 package com.greenfox.rest;
 
+import com.greenfox.rest.Log.LogEntry;
+import com.greenfox.rest.Log.LogServiceInterface;
 import com.greenfox.rest.Model.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.List;
 
 @RestController
 public class ApiController {
+  LogServiceInterface logService;
+
+  @Autowired
+  public ApiController(LogServiceInterface logService) {
+    this.logService = logService;
+  }
 
   @GetMapping("/doubling")
   public Object doubling(@RequestParam(value = "input", required = false) Integer input) {
     if (input != null) {
+      logService.log("/doubling", "input=" + input.toString());
       return new Doubling(input);
     } else {
+      logService.log("/doubling", "input=");
       return new ErrorMessage("Please provide an input!");
     }
   }
@@ -19,6 +33,7 @@ public class ApiController {
   public Object greeter(
       @RequestParam(value = "name", required = false) String name,
       @RequestParam(value = "title", required = false) String title) {
+    logService.log("/greeter", "name=" + name + " title=" + title);
     if (name == null && title == null) {
       return new ErrorMessage("Please provide a name and a title!");
     } else if (name == null) {
@@ -38,11 +53,13 @@ public class ApiController {
 
   @GetMapping("/appenda/{appendable}")
   public Object appendA(@PathVariable("appendable") String appendable) {
+    logService.log("/appenda/" + appendable, "");
     return new AppendAString(appendable);
   }
 
   @PostMapping("/dountil/{action}")
   public Object doUntil(@PathVariable("action") String action, @RequestBody Until until) {
+    logService.log("/dountil/" + action, "until=" + until.until);
     if (until.until != 0) {
       if (action.equals("sum")) {
         return new Result(until.sumUntil());
@@ -57,6 +74,7 @@ public class ApiController {
 
   @PostMapping("/arrays")
   public Object arrays(@RequestBody ArrayObject array) {
+    logService.log("/arrays", "numbers=" + Arrays.toString(array.numbers));
     if (array.numbers != null && array.what != null) {
       if (array.what.equals("sum")) {
         return new Result(array.sum());
@@ -67,5 +85,11 @@ public class ApiController {
       }
     }
     return new ErrorMessage("Please provide what to do with the numbers!");
+  }
+
+  @GetMapping("/log")
+  public List<LogEntry> getLog(){
+    logService.log("/log", "");
+    return logService.findAll();
   }
 }
