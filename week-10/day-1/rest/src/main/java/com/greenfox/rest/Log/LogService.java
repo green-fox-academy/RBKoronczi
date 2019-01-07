@@ -21,4 +21,8 @@ public class LogService implements LogServiceInterface{
   public void log(String endpoint, String data) {
     repository.save(new LogEntry(endpoint, data));
   }
+
+  public long countEntries() {
+    return repository.count();
+  }
 }

@@ -1,11 +1,13 @@
 package com.greenfox.rest;
 
 import com.greenfox.rest.Log.LogEntry;
+import com.greenfox.rest.Log.LogReport;
 import com.greenfox.rest.Log.LogServiceInterface;
 import com.greenfox.rest.Model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -89,8 +91,8 @@ public class ApiController {
   }
 
   @GetMapping("/log")
-  public List<LogEntry> getLog() {
+  public Object getLog() {
     logService.log("/log", "");
-    return logService.findAll();
+    return new LogReport(logService);
   }
 }
