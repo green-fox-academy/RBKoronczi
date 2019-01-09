@@ -1,5 +1,9 @@
 [Tiptop-Syllabus](https://github.com/green-fox-academy/tiptop-syllabus)
 
+[P2P-Chat](https://github.com/RBKoronczi/p2p-chat)
+
+[ToDo-App on Heroku](https://calm-inlet-17473.herokuapp.com/todo/)
+
 ToDo-App: <https://github.com/RBKoronczi/todo-app>
 
 Wanderer: <https://github.com/RBKoronczi/wanderer-java>
