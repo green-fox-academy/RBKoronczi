@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/base::head(~{::title})">
+    <meta charset="UTF-8">
+    <title>TipTop Reddit</title>
+</head>
+<body>
+<header>
+    <nav class="navbar sticky-top navbar-dark bg-primary">
+        <a class="navbar-brand" href="/login">Log Test</a>
+        <a class="navbar-brand" href="/create">Post Something! <i class="material-icons">
+            add_circle_outline
+        </i>
+        </a>
+        <ul class="pagination">
+            <li th:class="*{currentPage == 1}?'page-item disabled' :'page-item'">
+                <a class="page-link" th:href="'/?page=' + *{currentPage - 1}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <th:block th:each="pageNumber : ${pagination}">
+                <li th:class="*{pageNumber == currentPage} ? 'page-item active' : 'page-item'">
+                    <a class="page-link" th:href="'/?page=' +${pageNumber}" th:text="${pageNumber}">1</a>
+                </li>
+            </th:block>
+            <li class="page-item">
+                <a class="page-link" th:href="'/?page=' + *{currentPage + 1}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <div id="accordion" role="tablist">
+            <div class="card" th:each="post : ${posts}">
+                <div class="card-header" role="tab" th:id="'heading'+${post.getId()}">
+                    <h5 class="mb-0">
+                        <span th:text="${post.getVotes()}"></span>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <form th:action="@{/{id}/upVote(id=${post.getId()})}" method="post">
+                                <button type="submit" class="btn btn-info">
+                                    <i class="material-icons">add_circle</i>
+                                </button>
+                            </form>
+                            <form th:action="@{/{id}/downVote(id=${post.getId()})}" method="post">
+                                <button type="submit" class="btn btn-warning">
+                                    <i class="material-icons">remove_circle</i>
+                                </button>
+                            </form>
+                        </div>
+                        <a data-toggle="collapse"
+                           th:href="'#collapse'+${post.getId()}"
+                           aria-expanded="false"
+                           th:aria-controls="'collapse'+${post.getId()}"
+                           th:text="${post.getTitle()}">
+                        </a>
+                        <span th:text="'Created: ' + ${post.getCreated()}"></span>
+                    </h5>
+                </div>
+                <div th:id="'collapse'+${post.getId()}" class="collapse" role="tabpanel"
+                     th:aria-labelledby="'heading'+${post.getId()}">
+                    <div class="card-body" th:utext="${post.getContent()}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer th:replace="fragments/base::footer">
+</footer>
+</body>
+</html>

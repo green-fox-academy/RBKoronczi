@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main">
+    <header th:replace="base :: header"></header>
+    <div class="content">
+        <table>
+            <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Animal Type</th>
+            <th></th>
+            <th>Alignment</th>
+            <th>Add Food</th>
+            </thead>
+            <tbody>
+                <tr th:each="account : ${accounts}" th:class="${account.isKing()}? 'king' : 'commoner'">
+                    <td class="tableIndex" th:text="${accountStat.index}"></td>
+                    <td class="name" th:text="${account.getName()}"></td>
+                    <td class="balance" th:text="${#numbers.formatDecimal(account.getBalance(), 1, 2)}"></td>
+                    <td class="animalType" th:text="${account.getAnimalType()}"></td>
+                    <td class="crown"><img th:src="${account.isKing()}? 'img/crown.png' : _"></td>
+                    <td class="goodGuy" th:text="${account.isGoodGuy()}? 'Good guy' : 'Bad guy'"></td>
+                    <td>
+                        <form class="addMoney" method="POST" action="/addMoney">
+                            <button type="submit" name="index" th:value="${accountStat.index}">$Zebras++$</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr class="addAccounts">
+                    <form class="addAccountForm" method="POST" action="/addAccount">
+                        <td></td>
+                        <td>
+                            <input name="name" type="text" placeholder="name">
+                        </td>
+                        <td class="balance">
+                            <input name="balance" type="number" placeholder="0">
+                        </td>
+                        <td>
+                            <input name="type" type="text" placeholder="type">
+                        </td>
+                        <td>
+                            <input name="isKing" type="checkbox">
+                        </td>
+                        <td>
+                            <input name="isGoodGuy" type="checkbox">
+                        </td>
+                        <td><button type="submit">Submit</button></td>
+                    </form>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer th:replace="base :: footer"></footer>
+</div>
+</body>
+</html>
