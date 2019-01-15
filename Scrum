@@ -1,0 +1,19 @@
+Scrum (not really good for devOps)
+
+Stand-ups (every day / 10-15 min)
+  - What was I doing yesterday
+  - What will I do today
+  - What do I need
+
+Planning (every Monday)
+
+Backlog Refinement
+(Thinking forward)
+
+Infrastructure as Code
+
+hub.docker.com
+
+docker build -t reddit .
+docker images
+docker run reddit
