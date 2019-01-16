@@ -1,6 +1,6 @@
 docker run \
 --name reddit \
---link database:mysql \
+--link database \
 -p 8080:8080 \
 -e REDDIT_DB_URL=jdbc:mysql://database:3306/reddit \
 -e REDDIT_DB_USERNAME=user \
