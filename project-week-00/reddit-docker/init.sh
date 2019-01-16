@@ -7,8 +7,8 @@ docker run \
 -d \
 --rm \
 mysql:5
-
-
+# Wait a few seconds for initialization
+sleep 30
 docker run \
 --name reddit \
 --link database \
