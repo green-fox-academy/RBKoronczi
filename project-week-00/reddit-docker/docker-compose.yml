@@ -11,7 +11,7 @@ services:
     expose:
       - 3306
   reddit:
-    image: reddit
+    image: rbkoronczi/reddit
     container_name: reddit
     ports:
       - "8080:8080"
@@ -19,5 +19,7 @@ services:
       REDDIT_DB_URL: jdbc:mysql://database:3306/reddit
       REDDIT_DB_USERNAME: user
       REDDIT_DB_PASSWORD: test123
+      REDDIT_USERNAME: user
+      REDDIT_PASSWORD: password
     depends_on:
       - database
