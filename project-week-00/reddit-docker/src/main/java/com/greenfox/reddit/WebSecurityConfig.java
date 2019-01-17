@@ -33,8 +33,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   public UserDetailsService userDetailsService() {
     UserDetails user =
         User.withDefaultPasswordEncoder()
-            .username("user")
-            .password("password")
+            .username(System.getenv("REDDIT_USERNAME"))
+            .password(System.getenv("REDDIT_PASSWORD"))
             .roles("USER")
             .build();
 
