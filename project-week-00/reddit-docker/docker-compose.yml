@@ -1,0 +1,23 @@
+version: '3'
+services:
+  database:
+    image: mysql:5
+    container_name: database
+    environment:
+      MYSQL_ROOT_PASSWORD: egysornemsor
+      MYSQL_DATABASE: reddit
+      MYSQL_USER: user
+      MYSQL_PASSWORD: test123
+    expose:
+      - 3306
+  reddit:
+    image: reddit
+    container_name: reddit
+    ports:
+      - "8080:8080"
+    environment:
+      REDDIT_DB_URL: jdbc:mysql://database:3306/reddit
+      REDDIT_DB_USERNAME: user
+      REDDIT_DB_PASSWORD: test123
+    depends_on:
+      - database
