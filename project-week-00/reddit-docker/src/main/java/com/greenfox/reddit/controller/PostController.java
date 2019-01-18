@@ -2,6 +2,7 @@ package com.greenfox.reddit.controller;
 
 import com.greenfox.reddit.model.Post;
 import com.greenfox.reddit.service.PostService;
+import com.greenfox.reddit.service.PostServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,6 +54,12 @@ public class PostController {
   @PostMapping("/{id}/downVote")
   public String downVote(@PathVariable("id") long id) {
     service.downVote(id);
+    return "redirect:/";
+  }
+
+  @PostMapping("/{id}/delete")
+  public String delete(@PathVariable("id") long id) {
+    service.delete(id);
     return "redirect:/";
   }
 

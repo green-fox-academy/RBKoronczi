@@ -63,7 +63,14 @@
                 </div>
                 <div th:id="'collapse'+${post.getId()}" class="collapse" role="tabpanel"
                      th:aria-labelledby="'heading'+${post.getId()}">
-                    <div class="card-body" th:utext="${post.getContent()}">
+                    <div class="card-body">
+                        <p class="card-text" th:utext="${post.getContent()}">
+                            Some quick example text to build on the card title
+                            and make up the bulk of the card's content.
+                        </p>
+                        <form th:action="@{/{id}/delete(id=${post.getId()})}" method="post">
+                            <Button class="btn btn-danger">Remove Post</Button>
+                        </form>
                     </div>
                 </div>
             </div>
