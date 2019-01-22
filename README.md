@@ -1,4 +1,4 @@
-[Reddit clone on AWS](http://reddit-env.urndgqwp8s.eu-north-1.elasticbeanstalk.com/)
+[Reddit clone on DockerHub](https://cloud.docker.com/u/rbkoronczi/repository/docker/rbkoronczi/reddit)
 
 [Tiptop-Syllabus](https://github.com/green-fox-academy/tiptop-syllabus)
 
